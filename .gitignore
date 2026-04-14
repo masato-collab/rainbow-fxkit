@@ -1,0 +1,31 @@
+# OS / エディタ
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
+
+# ログ・一時ファイル
+*.log
+*.tmp
+*.bak
+
+# Node（将来ビルドツール導入時用）
+node_modules/
+dist/
+.cache/
+
+# 環境変数
+.env
+.env.local
+
+# MT4ビルド成果物（誤コミット防止）
+*.ex4
+*.ex5
+
+# zipパッケージはReleasesで配布するためリポジトリには含めない
+releases/
+*.zip

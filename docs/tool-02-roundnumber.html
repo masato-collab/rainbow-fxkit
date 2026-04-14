@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キリ番アラート — 仕様書 | Rainbow Project</title>
+  <meta name="description" content="RoundNumber_Alert の仕様書。00・50pipsなどのキリ番にラインを自動描画し、接近・到達時にアラート発動するインジケーター。">
+  <meta name="theme-color" content="#FFA94D">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-tool="02">
+  <a href="#main" class="skip-link">本文へスキップ</a>
+
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../assets/logo.svg" alt="" width="32" height="32"><span>Rainbow Project</span></a>
+      <button class="nav__toggle" type="button" aria-label="メニューを開閉" aria-controls="nav-menu" aria-expanded="false"><span aria-hidden="true"></span></button>
+      <nav aria-label="メインナビゲーション"><ul class="nav__menu" id="nav-menu">
+        <li><a href="../index.html#tools">ツール一覧</a></li>
+        <li><a href="../about.html">プロジェクトについて</a></li>
+        <li><a href="./index.html">仕様書</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="../index.html#bulk" class="nav__cta">🎁 一括DL</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="docs-layout">
+      <aside class="docs-sidebar" aria-label="ツールナビゲーション">
+        <a class="docs-sidebar__back" href="../index.html">🌈 配布ページに戻る</a>
+        <p class="docs-sidebar__heading">10 の 仕様書</p>
+        <ul class="docs-sidebar__list">
+          <li><a data-tool="01" href="./tool-01-jptime.html"><span class="docs-sidebar__dot"></span>日本時間表示</a></li>
+          <li><a class="is-active" data-tool="02" href="./tool-02-roundnumber.html"><span class="docs-sidebar__dot"></span>キリ番アラート</a></li>
+          <li><a data-tool="03" href="./tool-03-economic.html"><span class="docs-sidebar__dot"></span>経済指標</a></li>
+          <li><a data-tool="04" href="./tool-04-lot.html"><span class="docs-sidebar__dot"></span>ロット計算</a></li>
+          <li><a data-tool="05" href="./tool-05-correlation.html"><span class="docs-sidebar__dot"></span>相関モニター</a></li>
+          <li><a data-tool="06" href="./tool-06-sltp.html"><span class="docs-sidebar__dot"></span>ビジュアルSL/TP</a></li>
+          <li><a data-tool="07" href="./tool-07-oneclick.html"><span class="docs-sidebar__dot"></span>ワンクリック決済</a></li>
+          <li><a data-tool="08" href="./tool-08-warning.html"><span class="docs-sidebar__dot"></span>サイズ警告</a></li>
+          <li><a data-tool="09" href="./tool-09-multitf.html"><span class="docs-sidebar__dot"></span>複数時間足</a></li>
+          <li><a data-tool="10" href="./tool-10-strength.html"><span class="docs-sidebar__dot"></span>通貨強弱</a></li>
+        </ul>
+        <a class="docs-sidebar__cta" href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/FXKit_All.zip" download>🎁 10ツール 一括DL</a>
+      </aside>
+
+      <article class="docs-main">
+        <nav aria-label="パンくず" class="breadcrumbs">
+          <a href="../index.html">トップ</a>
+          <a href="./index.html">仕様書</a>
+          <span>キリ番アラート</span>
+        </nav>
+
+        <header class="docs-hero">
+          <div class="docs-hero__icon" aria-hidden="true">🔔</div>
+          <span class="docs-hero__eyebrow">#02 · INDICATOR</span>
+          <h1 class="docs-hero__title">キリ番アラート</h1>
+          <p class="docs-hero__sub"><code>RoundNumber_Alert</code> — キリの良い価格帯への接近・到達を音と通知で逃さない</p>
+        </header>
+
+        <section class="docs-block">
+          <h2>概要</h2>
+          <p>FXでは X.X000 や X.X500 といった「キリ番」が強力なサポート/レジスタンスとして機能することが多く、見落とすと痛恨の損失につながります。本インジケーターはキリ番にラインを自動描画し、接近時と到達時に音・ポップアップ・メール/プッシュで通知します。</p>
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/RoundNumber_Alert.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+          <div class="screenshot-placeholder">スクリーンショット(後日差し替え)</div>
+        </section>
+
+        <section class="docs-block">
+          <h2>主な機能</h2>
+          <ul class="feature-list">
+            <li>指定pips間隔のキリ番を自動計算(10/25/50/100pipsなど)</li>
+            <li>チャート上下に指定本数分のキリ番水平ラインを自動描画</li>
+            <li>残り○pipsでの接近アラート(距離はパラメーターで指定)</li>
+            <li>タッチ/ブレイク時の到達アラート</li>
+            <li>同一キリ番への重複アラートを自動抑制(価格が離れるまで再発動しない)</li>
+            <li>JPYペア/その他ペアのpip単位を自動判定(3桁/5桁ブローカー対応)</li>
+            <li>音・ポップアップ・メール・プッシュ通知すべて対応</li>
+          </ul>
+        </section>
+
+        <section class="docs-block">
+          <h2>使い方</h2>
+          <ol class="step-list">
+            <li>zipを解凍し <code>RoundNumber_Alert.mq4</code> を取り出す</li>
+            <li>MT4「データフォルダを開く」→ MQL4 → Indicators に配置</li>
+            <li>MT4を再起動、ナビゲーターからチャートにドラッグ</li>
+            <li>キリ番間隔(<code>RNA_IntervalPips</code>)と接近距離(<code>RNA_ApproachPips</code>)を設定</li>
+            <li>通知したい方法のフラグ(Alert/Sound/Mail/Push)をオン</li>
+          </ol>
+        </section>
+
+        <section class="docs-block">
+          <h2>パラメーター</h2>
+          <table class="params-table">
+            <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
+            <tbody>
+              <tr><td>RNA_IntervalPips</td><td class="t-type">double</td><td class="t-default">50.0</td><td>キリ番の間隔(pips)。10/25/50/100 など</td></tr>
+              <tr><td>RNA_ApproachPips</td><td class="t-type">double</td><td class="t-default">5.0</td><td>接近アラートの発動距離(pips)</td></tr>
+              <tr><td>RNA_LinesAbove</td><td class="t-type">int</td><td class="t-default">5</td><td>現在価格より上方向に描画するキリ番の本数</td></tr>
+              <tr><td>RNA_LinesBelow</td><td class="t-type">int</td><td class="t-default">5</td><td>現在価格より下方向に描画するキリ番の本数</td></tr>
+              <tr><td>RNA_UseAlert</td><td class="t-type">bool</td><td class="t-default">true</td><td>ポップアップアラートを鳴らす</td></tr>
+              <tr><td>RNA_UseSound</td><td class="t-type">bool</td><td class="t-default">true</td><td>追加のサウンドを鳴らす</td></tr>
+              <tr><td>RNA_UseMail</td><td class="t-type">bool</td><td class="t-default">false</td><td>メール通知を送信</td></tr>
+              <tr><td>RNA_UsePush</td><td class="t-type">bool</td><td class="t-default">false</td><td>モバイルプッシュ通知を送信</td></tr>
+              <tr><td>RNA_LineColor</td><td class="t-type">color</td><td class="t-default">clrDodgerBlue</td><td>キリ番ラインの色</td></tr>
+              <tr><td>RNA_LineWidth</td><td class="t-type">int</td><td class="t-default">1</td><td>ラインの太さ</td></tr>
+              <tr><td>RNA_ResetBufferPips</td><td class="t-type">double</td><td class="t-default">2.0</td><td>アラートリセット用の追加バッファ(pips)</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="docs-block">
+          <h2>注意事項</h2>
+          <div class="note" role="note">
+            <p>⚠️ メール通知は MT4「ツール→オプション→メール」でSMTP設定、プッシュ通知は「通知機能」でMetaQuotes IDの登録が必要です。</p>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <h2>このツールのFAQ</h2>
+          <div class="faq">
+            <details class="faq__item" data-faq-single="false">
+              <summary class="faq__q">同じキリ番で何度も鳴ってしまいます</summary>
+              <div class="faq__a"><p><code>RNA_ResetBufferPips</code>を大きめ(3.0〜5.0)に設定してください。</p></div>
+            </details>
+            <details class="faq__item" data-faq-single="false">
+              <summary class="faq__q">ラインが描画されません</summary>
+              <div class="faq__a"><p><code>RNA_IntervalPips</code>が大きすぎる可能性があります。小さい値でお試しください。</p></div>
+            </details>
+            <details class="faq__item" data-faq-single="false">
+              <summary class="faq__q">サウンドが鳴りません</summary>
+              <div class="faq__a"><p><code>RNA_SoundApproach</code>/<code>RNA_SoundTouch</code>に指定したWAVファイルがMT4の<code>Sounds</code>フォルダにあるかご確認ください。</p></div>
+            </details>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <h2>関連ツール</h2>
+          <div class="related-tools">
+            <a class="related-tools__item" data-tool="06" href="./tool-06-sltp.html"><span class="related-tools__dot"></span>ビジュアル損切り・利確ライン</a>
+            <a class="related-tools__item" data-tool="09" href="./tool-09-multitf.html"><span class="related-tools__dot"></span>複数時間足トレンド一覧</a>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/RoundNumber_Alert.zip" class="btn btn--tool btn--lg" download>📥 ダウンロード</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo"><img src="../assets/logo.svg" alt="" width="28" height="28"><span>Rainbow Project</span></a>
+        <ul class="footer__links">
+          <li><a href="../index.html#tools">ツール一覧</a></li>
+          <li><a href="../about.html">プロジェクトについて</a></li>
+          <li><a href="./index.html">仕様書</a></li>
+          <li><a href="../disclaimer.html">免責事項</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p class="footer__copy">© Rainbow Project. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer__bar" aria-hidden="true"></div>
+  </footer>
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

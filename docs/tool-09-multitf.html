@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>複数時間足トレンド一覧 — 仕様書 | Rainbow Project</title>
+  <meta name="description" content="MultiTF_TrendPanel の仕様書。M5〜W1のトレンド方向を信号機形式で一覧表示するインジケーター。">
+  <meta name="theme-color" content="#DA77F2">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-tool="09">
+  <a href="#main" class="skip-link">本文へスキップ</a>
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../assets/logo.svg" alt="" width="32" height="32"><span>Rainbow Project</span></a>
+      <button class="nav__toggle" type="button" aria-label="メニューを開閉" aria-controls="nav-menu" aria-expanded="false"><span aria-hidden="true"></span></button>
+      <nav aria-label="メインナビゲーション"><ul class="nav__menu" id="nav-menu">
+        <li><a href="../index.html#tools">ツール一覧</a></li>
+        <li><a href="../about.html">プロジェクトについて</a></li>
+        <li><a href="./index.html">仕様書</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="../index.html#bulk" class="nav__cta">🎁 一括DL</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="docs-layout">
+      <aside class="docs-sidebar" aria-label="ツールナビゲーション">
+        <a class="docs-sidebar__back" href="../index.html">🌈 配布ページに戻る</a>
+        <p class="docs-sidebar__heading">10 の 仕様書</p>
+        <ul class="docs-sidebar__list">
+          <li><a data-tool="01" href="./tool-01-jptime.html"><span class="docs-sidebar__dot"></span>日本時間表示</a></li>
+          <li><a data-tool="02" href="./tool-02-roundnumber.html"><span class="docs-sidebar__dot"></span>キリ番アラート</a></li>
+          <li><a data-tool="03" href="./tool-03-economic.html"><span class="docs-sidebar__dot"></span>経済指標</a></li>
+          <li><a data-tool="04" href="./tool-04-lot.html"><span class="docs-sidebar__dot"></span>ロット計算</a></li>
+          <li><a data-tool="05" href="./tool-05-correlation.html"><span class="docs-sidebar__dot"></span>相関モニター</a></li>
+          <li><a data-tool="06" href="./tool-06-sltp.html"><span class="docs-sidebar__dot"></span>ビジュアルSL/TP</a></li>
+          <li><a data-tool="07" href="./tool-07-oneclick.html"><span class="docs-sidebar__dot"></span>ワンクリック決済</a></li>
+          <li><a data-tool="08" href="./tool-08-warning.html"><span class="docs-sidebar__dot"></span>サイズ警告</a></li>
+          <li><a class="is-active" data-tool="09" href="./tool-09-multitf.html"><span class="docs-sidebar__dot"></span>複数時間足</a></li>
+          <li><a data-tool="10" href="./tool-10-strength.html"><span class="docs-sidebar__dot"></span>通貨強弱</a></li>
+        </ul>
+        <a class="docs-sidebar__cta" href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/FXKit_All.zip" download>🎁 10ツール 一括DL</a>
+      </aside>
+
+      <article class="docs-main">
+        <nav aria-label="パンくず" class="breadcrumbs">
+          <a href="../index.html">トップ</a><a href="./index.html">仕様書</a><span>複数時間足トレンド一覧</span>
+        </nav>
+        <header class="docs-hero">
+          <div class="docs-hero__icon" aria-hidden="true">📈</div>
+          <span class="docs-hero__eyebrow">#09 · INDICATOR</span>
+          <h1 class="docs-hero__title">複数時間足トレンド一覧</h1>
+          <p class="docs-hero__sub"><code>MultiTF_TrendPanel</code> — 全時間足のトレンドを信号機で一目把握</p>
+        </header>
+
+        <section class="docs-block">
+          <h2>概要</h2>
+          <p>短期の動きだけを見て逆張りしてしまい、大きな流れに飲まれる——これもよくあるパターンです。本インジケーターはM5/M15/M30/H1/H4/D1/W1の複数時間足のトレンド方向を同時に計算し、上昇=緑/下降=赤/レンジ=灰色の信号機パネルで一覧表示します。全足一致時にアラートを鳴らす機能も。</p>
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/MultiTF_TrendPanel.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+          <div class="screenshot-placeholder">スクリーンショット(後日差し替え)</div>
+        </section>
+
+        <section class="docs-block">
+          <h2>主な機能</h2>
+          <ul class="feature-list">
+            <li>M5〜W1の最大7時間足を一覧表示</li>
+            <li>上昇(緑)/下降(赤)/レンジ(灰)の信号機形式</li>
+            <li>トレンド判定方式を3種(MA/ADX/高安更新)から選択可能</li>
+            <li>全時間足の一致度(0〜100%)を算出</li>
+            <li>強いトレンド発生時(一致度が閾値超え)にアラート</li>
+            <li>監視する時間足を個別にオン/オフ可能</li>
+          </ul>
+        </section>
+
+        <section class="docs-block">
+          <h2>使い方</h2>
+          <ol class="step-list">
+            <li>zipを解凍し<code>MultiTF_TrendPanel.mq4</code>を取り出す</li>
+            <li>MT4「データフォルダを開く」→ MQL4 → Indicators に配置</li>
+            <li>MT4を再起動しチャートにドラッグ</li>
+            <li>トレンド判定方式と有効化する時間足を選択</li>
+            <li>一致度アラートの閾値(例:80%)を設定</li>
+          </ol>
+        </section>
+
+        <section class="docs-block">
+          <h2>パラメーター</h2>
+          <table class="params-table">
+            <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
+            <tbody>
+              <tr><td>MTP_Method</td><td class="t-type">enum</td><td class="t-default">METHOD_MA</td><td>トレンド判定方式(MA/ADX/HL)</td></tr>
+              <tr><td>MTP_MAPeriod</td><td class="t-type">int</td><td class="t-default">50</td><td>MA方式で使うMAの期間</td></tr>
+              <tr><td>MTP_ADXThreshold</td><td class="t-type">double</td><td class="t-default">25.0</td><td>ADX方式でトレンドと判定する閾値</td></tr>
+              <tr><td>MTP_EnableM5〜MTP_EnableW1</td><td class="t-type">bool</td><td class="t-default">true</td><td>各時間足の表示有効化</td></tr>
+              <tr><td>MTP_AlertMatchPct</td><td class="t-type">double</td><td class="t-default">80.0</td><td>一致度がこの%を超えたらアラート</td></tr>
+              <tr><td>MTP_UseAlert</td><td class="t-type">bool</td><td class="t-default">true</td><td>一致度アラートを有効化</td></tr>
+              <tr><td>MTP_PanelCorner</td><td class="t-type">enum</td><td class="t-default">RIGHT_UPPER</td><td>パネル表示位置</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="docs-block">
+          <h2>注意事項</h2>
+          <div class="note" role="note"><p>⚠️ トレンド方向の判定は、使用する判定方式によって結果が異なります。同じチャートを異なる方式で見比べると、相場認識の幅が広がります。あくまで判断補助です。</p></div>
+        </section>
+
+        <section class="docs-block">
+          <h2>このツールのFAQ</h2>
+          <div class="faq">
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">一致度が常に低く、アラートが出ません</summary><div class="faq__a"><p>レンジ相場では一致度が低くなりがちです。<code>MTP_AlertMatchPct</code>を70%程度まで下げるか、<code>MTP_Method</code>を変えてみてください。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">上位足だけを重視したい</summary><div class="faq__a"><p>M5/M15/M30をオフにして、H1以上のみ監視する構成にできます。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">別の通貨ペアのトレンドも見られますか?</summary><div class="faq__a"><p>現状は表示中のチャートの通貨ペアのみです。別ペアは別チャートに当ててご利用ください。</p></div></details>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <h2>関連ツール</h2>
+          <div class="related-tools">
+            <a class="related-tools__item" data-tool="05" href="./tool-05-correlation.html"><span class="related-tools__dot"></span>相関通貨ペアモニター</a>
+            <a class="related-tools__item" data-tool="10" href="./tool-10-strength.html"><span class="related-tools__dot"></span>通貨強弱メーター</a>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/MultiTF_TrendPanel.zip" class="btn btn--tool btn--lg" download>📥 ダウンロード</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo"><img src="../assets/logo.svg" alt="" width="28" height="28"><span>Rainbow Project</span></a>
+        <ul class="footer__links">
+          <li><a href="../index.html#tools">ツール一覧</a></li>
+          <li><a href="../about.html">プロジェクトについて</a></li>
+          <li><a href="./index.html">仕様書</a></li>
+          <li><a href="../disclaimer.html">免責事項</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p class="footer__copy">© Rainbow Project. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer__bar" aria-hidden="true"></div>
+  </footer>
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

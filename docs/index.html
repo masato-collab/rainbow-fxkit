@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>仕様書一覧 — Rainbow Project</title>
+  <meta name="description" content="Rainbow Project で配布する10のFXツールの詳細仕様書一覧。各ツールのパラメーター・使い方・注意事項を確認できます。">
+  <meta name="theme-color" content="#FDFCFB">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="仕様書一覧 — Rainbow Project">
+  <meta property="og:description" content="10のFXツールの詳細仕様書一覧。">
+  <meta property="og:image" content="../assets/og-image.svg">
+  <meta property="og:url" content="https://masato-collab.github.io/rainbow-fxkit/docs/">
+  <meta property="og:site_name" content="Rainbow Project">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="仕様書一覧 — Rainbow Project">
+  <meta name="twitter:description" content="10のFXツールの詳細仕様書一覧。">
+  <meta name="twitter:image" content="../assets/og-image.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .docs-index-hero {
+      padding: calc(var(--nav-height) + var(--space-10)) 0 var(--space-8);
+      background: var(--rainbow-gradient-soft);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .docs-index-hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.6), transparent 60%);
+      pointer-events: none;
+    }
+    .docs-index-hero__inner { position: relative; }
+    .docs-index-hero__title {
+      font-size: clamp(1.875rem, 4.5vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-3);
+    }
+    .docs-index-hero__lead {
+      color: var(--text-secondary);
+      font-size: 1.0625rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">本文へスキップ</a>
+
+  <!-- ナビゲーション -->
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="Rainbow Project トップへ">
+        <img src="../assets/logo.svg" alt="" width="32" height="32">
+        <span>Rainbow Project</span>
+      </a>
+      <button class="nav__toggle" type="button"
+              aria-label="メニューを開閉" aria-controls="nav-menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+      </button>
+      <nav aria-label="メインナビゲーション">
+        <ul class="nav__menu" id="nav-menu">
+          <li><a href="../index.html#tools">ツール一覧</a></li>
+          <li><a href="../about.html">プロジェクトについて</a></li>
+          <li><a href="./index.html">仕様書</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="../index.html#bulk" class="nav__cta">🎁 一括DL</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="docs-index-hero" aria-labelledby="docs-index-title">
+      <div class="container docs-index-hero__inner">
+        <span class="hero__eyebrow reveal" style="margin-bottom:var(--space-4);">
+          <span class="gradient-text">📚 Documentation</span>
+        </span>
+        <h1 id="docs-index-title" class="docs-index-hero__title reveal">仕様書一覧</h1>
+        <p class="docs-index-hero__lead reveal">10のツールそれぞれの機能・パラメーター・使い方を詳しく解説しています。</p>
+        <div class="divider-rainbow" aria-hidden="true" style="margin-top:var(--space-5);"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <nav aria-label="パンくず" class="breadcrumbs reveal" style="margin-bottom:var(--space-6);">
+          <a href="../index.html">トップ</a>
+          <span>仕様書一覧</span>
+        </nav>
+
+        <div class="docs-index-grid">
+
+          <a class="docs-index-card reveal" data-tool="01" href="./tool-01-jptime.html">
+            <span class="docs-index-card__num">#01 · 🕐 インジケーター</span>
+            <h2 class="docs-index-card__title">日本時間表示インジケーター</h2>
+            <code class="docs-index-card__code">JPTime_MarketClock</code>
+            <p class="docs-index-card__desc">MT4サーバー時間を日本時間に自動変換。東京・ロンドン・NYの市場営業時間も表示。</p>
+          </a>
+
+          <a class="docs-index-card reveal" data-tool="02" href="./tool-02-roundnumber.html">
+            <span class="docs-index-card__num">#02 · 🔔 インジケーター</span>
+            <h2 class="docs-index-card__title">キリ番アラート</h2>
+            <code class="docs-index-card__code">RoundNumber_Alert</code>
+            <p class="docs-index-card__desc">キリ番への接近・到達を音とポップアップで通知。水平ライン自動描画。</p>
+          </a>
+
+          <a class="docs-index-card reveal" data-tool="03" href="./tool-03-economic.html">
+            <span class="docs-index-card__num">#03 · 📅 インジケーター</span>
+            <h2 class="docs-index-card__title">経済指標カウントダウン</h2>
+            <code class="docs-index-card__code">EconomicCalendar_Countdown</code>
+            <p class="docs-index-card__desc">重要経済指標までの残り時間を常時表示。重要度別に色分け。</p>
+          </a>
+
+          <a class="docs-index-card reveal" data-tool="04" href="./tool-04-lot.html">
+            <span class="docs-index-card__num">#04 · 🧮 ユーティリティEA</span>
+            <h2 class="docs-index-card__title">ロット計算機</h2>
+            <code class="docs-index-card__code">LotCalculator_Panel</code>
+            <p class="docs-index-card__desc">最適ロットサイズを自動計算するパネル。損失想定額・RR別利益額を表示。</p>
+          </a>
+
+          <a class="docs-index-card reveal" data-tool="05" href="./tool-05-correlation.html">
+            <span class="docs-index-card__num">#05 · 📊 インジケーター</span>
+            <h2 class="docs-index-card__title">相関通貨ペアモニター</h2>
+            <code class="docs-index-card__code">CorrelationMatrix_Monitor</code>
+            <p class="docs-index-card__desc">主要通貨ペアの相関係数をマトリクス表示。ダイバージェンスアラート。</p>
+          </a>
+
+          <a class="docs-index-card reveal" data-tool="06" href="./tool-06-sltp.html">
+            <span class="docs-index-card__num">#06 · 🎯 ユーティリティEA</span>
+            <h2 class="docs-index-card__title">ビジュアル損切り・利確ライン</h2>
+            <code class="docs-index-card__code">VisualSLTP_Tool</code>
+            <p class="docs-index-card__desc">SL/TPをドラッグで設定、損益を即座に可視化。RR比もリアルタイム表示。</p>
+          </a>
+
+          <a class="docs-index-card reveal" data-tool="07" href="./tool-07-oneclick.html">
+            <span class="docs-index-card__num">#07 · ⚡ ユーティリティEA</span>
+            <h2 class="docs-index-card__title">ワンクリック全決済</h2>
+            <code class="docs-index-card__code">OneClick_CloseAll</code>
+            <p class="docs-index-card__desc">複数の決済オプションをボタン一発で実行。緊急時の冷静な操作を支援。</p>
+          </a>
+
+          <a class="docs-index-card reveal" data-tool="08" href="./tool-08-warning.html">
+            <span class="docs-index-card__num">#08 · ⚠️ EA</span>
+            <h2 class="docs-index-card__title">自動ポジションサイズ警告</h2>
+            <code class="docs-index-card__code">PositionSize_Warning</code>
+            <p class="docs-index-card__desc">過大ロット発注時に自動で警告。SL未設定・高レバレッジも検知。</p>
+          </a>
+
+          <a class="docs-index-card reveal" data-tool="09" href="./tool-09-multitf.html">
+            <span class="docs-index-card__num">#09 · 📈 インジケーター</span>
+            <h2 class="docs-index-card__title">複数時間足トレンド一覧</h2>
+            <code class="docs-index-card__code">MultiTF_TrendPanel</code>
+            <p class="docs-index-card__desc">M5〜W1のトレンド方向を信号機形式で表示。一致度アラート付き。</p>
+          </a>
+
+          <a class="docs-index-card reveal" data-tool="10" href="./tool-10-strength.html">
+            <span class="docs-index-card__num">#10 · 💪 インジケーター</span>
+            <h2 class="docs-index-card__title">通貨強弱メーター</h2>
+            <code class="docs-index-card__code">CurrencyStrength_Meter</code>
+            <p class="docs-index-card__desc">主要8通貨の強弱をバーグラフで可視化。最強×最弱の推奨ペアも提示。</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 一括DL -->
+    <section class="section" id="bulk">
+      <div class="bulk reveal">
+        <h2 class="bulk__title">まとめて、ぜんぶ手に入れる</h2>
+        <p class="bulk__subtitle">10ツール + 仕様書PDF + インストールガイド</p>
+        <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/FXKit_All.zip"
+           class="btn btn--rainbow-text btn--lg" download>
+          🎁 <span class="gradient-text">10ツール 一括ダウンロード</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo" aria-label="Rainbow Project">
+          <img src="../assets/logo.svg" alt="" width="28" height="28">
+          <span>Rainbow Project</span>
+        </a>
+        <ul class="footer__links">
+          <li><a href="../index.html#tools">ツール一覧</a></li>
+          <li><a href="../about.html">プロジェクトについて</a></li>
+          <li><a href="./index.html">仕様書</a></li>
+          <li><a href="../disclaimer.html">免責事項</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p class="footer__copy">© Rainbow Project. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer__bar" aria-hidden="true"></div>
+  </footer>
+
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

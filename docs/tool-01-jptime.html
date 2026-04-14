@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日本時間表示インジケーター — 仕様書 | Rainbow Project</title>
+  <meta name="description" content="JPTime_MarketClock の仕様書。MT4サーバー時間を日本時間に自動変換し、東京・ロンドン・NYの市場営業時間を表示するインジケーター。">
+  <meta name="theme-color" content="#FF6B6B">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-tool="01">
+
+  <a href="#main" class="skip-link">本文へスキップ</a>
+
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../assets/logo.svg" alt="" width="32" height="32"><span>Rainbow Project</span></a>
+      <button class="nav__toggle" type="button" aria-label="メニューを開閉" aria-controls="nav-menu" aria-expanded="false"><span aria-hidden="true"></span></button>
+      <nav aria-label="メインナビゲーション"><ul class="nav__menu" id="nav-menu">
+        <li><a href="../index.html#tools">ツール一覧</a></li>
+        <li><a href="../about.html">プロジェクトについて</a></li>
+        <li><a href="./index.html">仕様書</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="../index.html#bulk" class="nav__cta">🎁 一括DL</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="docs-layout">
+
+      <aside class="docs-sidebar" aria-label="ツールナビゲーション">
+        <a class="docs-sidebar__back" href="../index.html">🌈 配布ページに戻る</a>
+        <p class="docs-sidebar__heading">10 の 仕様書</p>
+        <ul class="docs-sidebar__list">
+          <li><a class="is-active" data-tool="01" href="./tool-01-jptime.html"><span class="docs-sidebar__dot"></span>日本時間表示</a></li>
+          <li><a data-tool="02" href="./tool-02-roundnumber.html"><span class="docs-sidebar__dot"></span>キリ番アラート</a></li>
+          <li><a data-tool="03" href="./tool-03-economic.html"><span class="docs-sidebar__dot"></span>経済指標</a></li>
+          <li><a data-tool="04" href="./tool-04-lot.html"><span class="docs-sidebar__dot"></span>ロット計算</a></li>
+          <li><a data-tool="05" href="./tool-05-correlation.html"><span class="docs-sidebar__dot"></span>相関モニター</a></li>
+          <li><a data-tool="06" href="./tool-06-sltp.html"><span class="docs-sidebar__dot"></span>ビジュアルSL/TP</a></li>
+          <li><a data-tool="07" href="./tool-07-oneclick.html"><span class="docs-sidebar__dot"></span>ワンクリック決済</a></li>
+          <li><a data-tool="08" href="./tool-08-warning.html"><span class="docs-sidebar__dot"></span>サイズ警告</a></li>
+          <li><a data-tool="09" href="./tool-09-multitf.html"><span class="docs-sidebar__dot"></span>複数時間足</a></li>
+          <li><a data-tool="10" href="./tool-10-strength.html"><span class="docs-sidebar__dot"></span>通貨強弱</a></li>
+        </ul>
+        <a class="docs-sidebar__cta" href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/FXKit_All.zip" download>🎁 10ツール 一括DL</a>
+      </aside>
+
+      <article class="docs-main">
+
+        <nav aria-label="パンくず" class="breadcrumbs">
+          <a href="../index.html">トップ</a>
+          <a href="./index.html">仕様書</a>
+          <span>日本時間表示インジケーター</span>
+        </nav>
+
+        <header class="docs-hero">
+          <div class="docs-hero__icon" aria-hidden="true">🕐</div>
+          <span class="docs-hero__eyebrow">#01 · INDICATOR</span>
+          <h1 class="docs-hero__title">日本時間表示インジケーター</h1>
+          <p class="docs-hero__sub"><code>JPTime_MarketClock</code> — サーバー時間と日本時間を併記し、三大市場の営業時間も一目で把握</p>
+        </header>
+
+        <section class="docs-block">
+          <h2>概要</h2>
+          <p>MT4サーバーの時刻(多くはGMT+2/+3)と日本時間(JST)の差分は、初心者にとって大きな混乱のもとです。本インジケーターはチャート上にサーバー時間・JSTを併記し、さらに東京・ロンドン・ニューヨーク市場のオープン/クローズまでのカウントダウンを表示します。夏時間(DST)は自動判定。</p>
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/JPTime_MarketClock.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+          <div class="screenshot-placeholder">スクリーンショット(後日差し替え)</div>
+        </section>
+
+        <section class="docs-block">
+          <h2>主な機能</h2>
+          <ul class="feature-list">
+            <li>サーバー時間と日本時間(JST)を同時表示</li>
+            <li>東京・ロンドン・NY の3大市場の営業状態(開場中/閉場中)表示</li>
+            <li>次回オープン/クローズまでのカウントダウン(時:分:秒)</li>
+            <li>夏時間(DST)を自動判定。米・英の切替日を内蔵</li>
+            <li>表示位置・フォントサイズ・文字色をパラメーターで調整可能</li>
+            <li>週末(土日)は「市場クローズ」を明示し、次のオープンまでを案内</li>
+          </ul>
+        </section>
+
+        <section class="docs-block">
+          <h2>使い方</h2>
+          <ol class="step-list">
+            <li>ダウンロードしたzipファイルを解凍する</li>
+            <li>MT4の「ファイル→データフォルダを開く→MQL4→Indicators」に<code>JPTime_MarketClock.mq4</code>を配置</li>
+            <li>MT4を再起動する</li>
+            <li>ナビゲーターから<code>JPTime_MarketClock</code>を適用したいチャートへドラッグ</li>
+            <li>パラメーターを必要に応じて調整して「OK」</li>
+          </ol>
+        </section>
+
+        <section class="docs-block">
+          <h2>パラメーター</h2>
+          <table class="params-table">
+            <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
+            <tbody>
+              <tr><td>ServerGMTOffset</td><td class="t-type">int</td><td class="t-default">3</td><td>サーバー時刻のGMTオフセット(夏時間は自動調整)</td></tr>
+              <tr><td>DisplayCorner</td><td class="t-type">enum</td><td class="t-default">RIGHT_UPPER</td><td>チャート上の表示位置(4隅から選択)</td></tr>
+              <tr><td>FontName</td><td class="t-type">string</td><td class="t-default">"Consolas"</td><td>表示フォント名</td></tr>
+              <tr><td>FontSize</td><td class="t-type">int</td><td class="t-default">12</td><td>フォントサイズ(pt)</td></tr>
+              <tr><td>TextColor</td><td class="t-type">color</td><td class="t-default">clrWhite</td><td>文字色</td></tr>
+              <tr><td>ShowTokyoSession</td><td class="t-type">bool</td><td class="t-default">true</td><td>東京市場の営業時間を表示するか</td></tr>
+              <tr><td>ShowLondonSession</td><td class="t-type">bool</td><td class="t-default">true</td><td>ロンドン市場の営業時間を表示するか</td></tr>
+              <tr><td>ShowNYSession</td><td class="t-type">bool</td><td class="t-default">true</td><td>NY市場の営業時間を表示するか</td></tr>
+              <tr><td>AutoDST</td><td class="t-type">bool</td><td class="t-default">true</td><td>夏時間を自動判定する</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="docs-block">
+          <h2>注意事項</h2>
+          <div class="note" role="note">
+            <p>⚠️ ブローカーによってサーバー時刻のGMTオフセットが異なります。表示が数時間ずれている場合は、<code>ServerGMTOffset</code> を手動で調整してください(多くの海外ブローカーは GMT+2 または GMT+3)。</p>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <h2>このツールのFAQ</h2>
+          <div class="faq">
+            <details class="faq__item" data-faq-single="false">
+              <summary class="faq__q">夏時間と冬時間の切替が正しく動きません</summary>
+              <div class="faq__a"><p><code>AutoDST=false</code> にして、<code>ServerGMTOffset</code> を手動設定することもできます。また、お使いのPCのタイムゾーン設定もご確認ください。</p></div>
+            </details>
+            <details class="faq__item" data-faq-single="false">
+              <summary class="faq__q">カウントダウンの秒がカクつきます</summary>
+              <div class="faq__a"><p>ティックが入らない休場時間帯は1秒毎の更新になりません。仕様上の動作です。</p></div>
+            </details>
+            <details class="faq__item" data-faq-single="false">
+              <summary class="faq__q">文字色を変えるとチャート背景と被って見えません</summary>
+              <div class="faq__a"><p><code>TextColor</code>をチャート背景色と対照的な色に変更してください。黒背景なら <code>clrWhite</code>、白背景なら <code>clrBlack</code> を推奨。</p></div>
+            </details>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <h2>関連ツール</h2>
+          <div class="related-tools">
+            <a class="related-tools__item" data-tool="03" href="./tool-03-economic.html"><span class="related-tools__dot"></span>経済指標カウントダウン</a>
+            <a class="related-tools__item" data-tool="09" href="./tool-09-multitf.html"><span class="related-tools__dot"></span>複数時間足トレンド一覧</a>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/JPTime_MarketClock.zip" class="btn btn--tool btn--lg" download>📥 ダウンロード</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo"><img src="../assets/logo.svg" alt="" width="28" height="28"><span>Rainbow Project</span></a>
+        <ul class="footer__links">
+          <li><a href="../index.html#tools">ツール一覧</a></li>
+          <li><a href="../about.html">プロジェクトについて</a></li>
+          <li><a href="./index.html">仕様書</a></li>
+          <li><a href="../disclaimer.html">免責事項</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p class="footer__copy">© Rainbow Project. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer__bar" aria-hidden="true"></div>
+  </footer>
+
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

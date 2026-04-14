@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" role="img" aria-label="Rainbow Project">
+  <title>Rainbow Project</title>
+  <!-- 虹のアーチ: 7色の同心半円 -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M 6 38 A 18 18 0 0 1 42 38" stroke="#FF6B6B" stroke-width="3"/>
+    <path d="M 9 38 A 15 15 0 0 1 39 38" stroke="#FFA94D" stroke-width="3"/>
+    <path d="M 12 38 A 12 12 0 0 1 36 38" stroke="#FFD43B" stroke-width="3"/>
+    <path d="M 15 38 A 9 9 0 0 1 33 38" stroke="#8CE99A" stroke-width="3"/>
+    <path d="M 18 38 A 6 6 0 0 1 30 38" stroke="#4DABF7" stroke-width="3"/>
+    <path d="M 21 38 A 3 3 0 0 1 27 38" stroke="#9775FA" stroke-width="3"/>
+  </g>
+  <!-- 雲(ベース) -->
+  <ellipse cx="10" cy="38.5" rx="5" ry="1.6" fill="#FDFCFB"/>
+  <ellipse cx="38" cy="38.5" rx="5" ry="1.6" fill="#FDFCFB"/>
+  <!-- テキスト: Rainbow Project -->
+  <text x="56" y="32"
+        font-family="Inter, 'Noto Sans JP', system-ui, sans-serif"
+        font-size="18"
+        font-weight="700"
+        letter-spacing="-0.01em"
+        fill="#2D3142">Rainbow Project</text>
+</svg>

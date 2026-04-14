@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>相関通貨ペアモニター — 仕様書 | Rainbow Project</title>
+  <meta name="description" content="CorrelationMatrix_Monitor の仕様書。主要通貨ペアの相関係数をマトリクス表示し、ダイバージェンス発生時にアラートを発動するインジケーター。">
+  <meta name="theme-color" content="#63E6BE">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-tool="05">
+  <a href="#main" class="skip-link">本文へスキップ</a>
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../assets/logo.svg" alt="" width="32" height="32"><span>Rainbow Project</span></a>
+      <button class="nav__toggle" type="button" aria-label="メニューを開閉" aria-controls="nav-menu" aria-expanded="false"><span aria-hidden="true"></span></button>
+      <nav aria-label="メインナビゲーション"><ul class="nav__menu" id="nav-menu">
+        <li><a href="../index.html#tools">ツール一覧</a></li>
+        <li><a href="../about.html">プロジェクトについて</a></li>
+        <li><a href="./index.html">仕様書</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="../index.html#bulk" class="nav__cta">🎁 一括DL</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="docs-layout">
+      <aside class="docs-sidebar" aria-label="ツールナビゲーション">
+        <a class="docs-sidebar__back" href="../index.html">🌈 配布ページに戻る</a>
+        <p class="docs-sidebar__heading">10 の 仕様書</p>
+        <ul class="docs-sidebar__list">
+          <li><a data-tool="01" href="./tool-01-jptime.html"><span class="docs-sidebar__dot"></span>日本時間表示</a></li>
+          <li><a data-tool="02" href="./tool-02-roundnumber.html"><span class="docs-sidebar__dot"></span>キリ番アラート</a></li>
+          <li><a data-tool="03" href="./tool-03-economic.html"><span class="docs-sidebar__dot"></span>経済指標</a></li>
+          <li><a data-tool="04" href="./tool-04-lot.html"><span class="docs-sidebar__dot"></span>ロット計算</a></li>
+          <li><a class="is-active" data-tool="05" href="./tool-05-correlation.html"><span class="docs-sidebar__dot"></span>相関モニター</a></li>
+          <li><a data-tool="06" href="./tool-06-sltp.html"><span class="docs-sidebar__dot"></span>ビジュアルSL/TP</a></li>
+          <li><a data-tool="07" href="./tool-07-oneclick.html"><span class="docs-sidebar__dot"></span>ワンクリック決済</a></li>
+          <li><a data-tool="08" href="./tool-08-warning.html"><span class="docs-sidebar__dot"></span>サイズ警告</a></li>
+          <li><a data-tool="09" href="./tool-09-multitf.html"><span class="docs-sidebar__dot"></span>複数時間足</a></li>
+          <li><a data-tool="10" href="./tool-10-strength.html"><span class="docs-sidebar__dot"></span>通貨強弱</a></li>
+        </ul>
+        <a class="docs-sidebar__cta" href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/FXKit_All.zip" download>🎁 10ツール 一括DL</a>
+      </aside>
+
+      <article class="docs-main">
+        <nav aria-label="パンくず" class="breadcrumbs">
+          <a href="../index.html">トップ</a><a href="./index.html">仕様書</a><span>相関通貨ペアモニター</span>
+        </nav>
+        <header class="docs-hero">
+          <div class="docs-hero__icon" aria-hidden="true">📊</div>
+          <span class="docs-hero__eyebrow">#05 · INDICATOR</span>
+          <h1 class="docs-hero__title">相関通貨ペアモニター</h1>
+          <p class="docs-hero__sub"><code>CorrelationMatrix_Monitor</code> — 主要通貨ペアの相関をリアルタイムで可視化</p>
+        </header>
+
+        <section class="docs-block">
+          <h2>概要</h2>
+          <p>相関の高いペアを同方向に複数ポジション取ることは、実質的にロットを倍増させているのと同じで、一気に資金を失う典型的パターンです。本インジケーターは主要通貨ペアの相関係数をマトリクス表示し、通常と異なる動き(ダイバージェンス)が発生したときにアラートを鳴らします。</p>
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/CorrelationMatrix_Monitor.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+          <div class="screenshot-placeholder">スクリーンショット(後日差し替え)</div>
+        </section>
+
+        <section class="docs-block">
+          <h2>主な機能</h2>
+          <ul class="feature-list">
+            <li>指定した主要通貨ペア間の相関係数をマトリクス表示(-1.0 〜 +1.0)</li>
+            <li>相関の強弱に応じて色分け(正相関=緑、逆相関=赤)</li>
+            <li>計算期間(短期/長期)を切り替え可能</li>
+            <li>通常の相関関係が崩れたダイバージェンス検出とアラート</li>
+            <li>リスク分散の観点で「同方向エントリー禁止ペア」をハイライト</li>
+          </ul>
+        </section>
+
+        <section class="docs-block">
+          <h2>使い方</h2>
+          <ol class="step-list">
+            <li>zipを解凍し<code>CorrelationMatrix_Monitor.mq4</code>を取り出す</li>
+            <li>MT4「データフォルダを開く」→ MQL4 → Indicators に配置</li>
+            <li>MT4を再起動しチャートにドラッグ</li>
+            <li>対象通貨ペアと計算期間を設定</li>
+            <li>マトリクスが表示されたらダイバージェンスアラートを有効化</li>
+          </ol>
+        </section>
+
+        <section class="docs-block">
+          <h2>パラメーター</h2>
+          <table class="params-table">
+            <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
+            <tbody>
+              <tr><td>CMM_Pairs</td><td class="t-type">string</td><td class="t-default">"EURUSD,GBPUSD,USDJPY,AUDUSD,USDCHF,USDCAD"</td><td>監視対象ペア(カンマ区切り)</td></tr>
+              <tr><td>CMM_Period</td><td class="t-type">int</td><td class="t-default">100</td><td>相関計算の期間(本数)</td></tr>
+              <tr><td>CMM_Timeframe</td><td class="t-type">enum</td><td class="t-default">PERIOD_H1</td><td>計算に使う時間足</td></tr>
+              <tr><td>CMM_AlertThreshold</td><td class="t-type">double</td><td class="t-default">0.3</td><td>相関ずれがこの値を超えたらアラート</td></tr>
+              <tr><td>CMM_UseAlert</td><td class="t-type">bool</td><td class="t-default">true</td><td>ダイバージェンスアラートを有効化</td></tr>
+              <tr><td>CMM_DisplayCorner</td><td class="t-type">enum</td><td class="t-default">LEFT_UPPER</td><td>マトリクスの表示位置</td></tr>
+              <tr><td>CMM_ColorPositive</td><td class="t-type">color</td><td class="t-default">clrLimeGreen</td><td>正相関時の色</td></tr>
+              <tr><td>CMM_ColorNegative</td><td class="t-type">color</td><td class="t-default">clrTomato</td><td>逆相関時の色</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="docs-block">
+          <h2>注意事項</h2>
+          <div class="note" role="note"><p>⚠️ 相関関係は時間とともに変化します。過去のデータに基づく相関が現在や将来もそのまま続くとは限りません。あくまでリスク判断の一助としてご活用ください。</p></div>
+        </section>
+
+        <section class="docs-block">
+          <h2>このツールのFAQ</h2>
+          <div class="faq">
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">マトリクスの数値が更新されません</summary><div class="faq__a"><p>該当する通貨ペアのチャートを一度表示してヒストリーデータを取得する必要があります。<code>気配値表示</code>で該当ペアを「全て表示」してください。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">計算が重いです</summary><div class="faq__a"><p><code>CMM_Period</code>を小さくするか、監視ペア数を減らすと軽くなります。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">ダイバージェンスアラートはどう使う?</summary><div class="faq__a"><p>通常の相関関係が崩れている時は、いずれか一方が先に動いている合図です。トレンド転換や個別要因のヒントに使えます。</p></div></details>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <h2>関連ツール</h2>
+          <div class="related-tools">
+            <a class="related-tools__item" data-tool="10" href="./tool-10-strength.html"><span class="related-tools__dot"></span>通貨強弱メーター</a>
+            <a class="related-tools__item" data-tool="09" href="./tool-09-multitf.html"><span class="related-tools__dot"></span>複数時間足トレンド一覧</a>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/CorrelationMatrix_Monitor.zip" class="btn btn--tool btn--lg" download>📥 ダウンロード</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo"><img src="../assets/logo.svg" alt="" width="28" height="28"><span>Rainbow Project</span></a>
+        <ul class="footer__links">
+          <li><a href="../index.html#tools">ツール一覧</a></li>
+          <li><a href="../about.html">プロジェクトについて</a></li>
+          <li><a href="./index.html">仕様書</a></li>
+          <li><a href="../disclaimer.html">免責事項</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p class="footer__copy">© Rainbow Project. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer__bar" aria-hidden="true"></div>
+  </footer>
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

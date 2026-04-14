@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rainbow Project favicon">
+  <title>Rainbow Project</title>
+  <!-- 背景(角丸) -->
+  <rect x="0" y="0" width="64" height="64" rx="14" ry="14" fill="#FDFCFB"/>
+  <!-- 7色アーチ -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M 8 48 A 24 24 0 0 1 56 48" stroke="#FF6B6B" stroke-width="4"/>
+    <path d="M 12 48 A 20 20 0 0 1 52 48" stroke="#FFA94D" stroke-width="4"/>
+    <path d="M 16 48 A 16 16 0 0 1 48 48" stroke="#FFD43B" stroke-width="4"/>
+    <path d="M 20 48 A 12 12 0 0 1 44 48" stroke="#8CE99A" stroke-width="4"/>
+    <path d="M 24 48 A 8 8 0 0 1 40 48" stroke="#4DABF7" stroke-width="4"/>
+    <path d="M 28 48 A 4 4 0 0 1 36 48" stroke="#9775FA" stroke-width="4"/>
+  </g>
+  <!-- 雲 -->
+  <ellipse cx="12" cy="49" rx="6" ry="2.2" fill="#FDFCFB"/>
+  <ellipse cx="52" cy="49" rx="6" ry="2.2" fill="#FDFCFB"/>
+</svg>

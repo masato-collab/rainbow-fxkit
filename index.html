@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainbow Project — FX初心者お守りツールパック</title>
+  <meta name="description" content="FX初心者が遠回りしないための「お守りツール」を10種類、完全無料で配布。迷わない、焦らない、損しない。はじめてのFXに、10の小さな守り神を。">
+  <meta name="theme-color" content="#FDFCFB">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rainbow Project — FX初心者お守りツールパック">
+  <meta property="og:description" content="迷わない、焦らない、損しない。はじめてのFXに、10の小さな守り神を。完全無料で配布中。">
+  <meta property="og:image" content="./assets/og-image.svg">
+  <meta property="og:url" content="https://masato-collab.github.io/rainbow-fxkit/">
+  <meta property="og:site_name" content="Rainbow Project">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rainbow Project — FX初心者お守りツールパック">
+  <meta name="twitter:description" content="迷わない、焦らない、損しない。はじめてのFXに、10の小さな守り神を。完全無料で配布中。">
+  <meta name="twitter:image" content="./assets/og-image.svg">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="apple-touch-icon" href="./assets/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">本文へスキップ</a>
+
+  <!-- ============================================================
+       ナビゲーション
+       ============================================================ -->
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="./index.html" class="nav__logo" aria-label="Rainbow Project トップへ">
+        <img src="./assets/logo.svg" alt="" width="32" height="32">
+        <span>Rainbow Project</span>
+      </a>
+
+      <button class="nav__toggle" type="button"
+              aria-label="メニューを開閉" aria-controls="nav-menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav aria-label="メインナビゲーション">
+        <ul class="nav__menu" id="nav-menu">
+          <li><a href="#tools">ツール一覧</a></li>
+          <li><a href="./about.html">プロジェクトについて</a></li>
+          <li><a href="./docs/index.html">仕様書</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="#bulk" class="nav__cta">🎁 一括DL</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         ヒーロー
+         ============================================================ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero__decor" src="./assets/hero-rainbow.svg" alt="" aria-hidden="true">
+      <div class="container hero__inner">
+        <span class="hero__eyebrow reveal">
+          <span class="gradient-text">🌈 Rainbow Project</span>
+        </span>
+        <h1 id="hero-title" class="hero__title reveal">
+          FX初心者<br>お守りツールパック
+        </h1>
+        <p class="hero__subtitle reveal">迷わない、焦らない、損しない。
+はじめてのFXに、10の小さな守り神を。</p>
+        <p class="hero__cta reveal">
+          <a href="#bulk" class="btn btn--primary btn--lg">🎁 10ツール すべて無料で受け取る</a>
+        </p>
+        <p class="hero__micro reveal">メアド登録不要 / 商用利用可 / 完全無料</p>
+      </div>
+      <a href="#tools" class="hero__scroll" aria-label="ツール一覧までスクロール">
+        <span>お好きなツールを選ぶ</span>
+        <span aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         ブランドストーリー
+         ============================================================ -->
+    <section class="section story" aria-labelledby="story-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-header__eyebrow">Our Story</span>
+          <h2 id="story-title" class="section-header__title">このプロジェクトについて</h2>
+        </div>
+        <div class="story__grid">
+          <div class="story__photo reveal" aria-hidden="true">
+            <!-- ▼ 後でここに写真を差し替え可能: <img src="./assets/photo.jpg" alt="代表の写真"> -->
+          </div>
+          <div class="story__text reveal">
+            <p>小学校までしか学校に行けなかった私が、
+シングルマザーとしてFXで生活を立て直しました。
+
+その道のりで、もっと早く知りたかったこと、
+誰かが教えてくれたら救われたことがたくさんあります。
+
+同じ場所で立ち止まっている誰かのために、
+私が作った10の「お守り」を贈ります。
+
+虹の7色のように、たくさんの可能性を
+一人でも多くの方に届けられますように。</p>
+            <p><a href="./about.html" class="btn btn--outline">もっと詳しく読む →</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         数字セクション
+         ============================================================ -->
+    <section class="section section--tight" aria-label="サマリー">
+      <div class="container">
+        <div class="stats">
+          <div class="stat reveal">
+            <span class="stat__num">10</span>
+            <span class="stat__label">の お守りツール</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__num">¥0</span>
+            <span class="stat__label">ずっと無料</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__num">5分</span>
+            <span class="stat__label">で導入完了</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__num">∞</span>
+            <span class="stat__label">使いたい放題</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ツール一覧
+         ============================================================ -->
+    <section class="section section--alt" id="tools" aria-labelledby="tools-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-header__eyebrow">10 Tools</span>
+          <h2 id="tools-title" class="section-header__title">10の守り神たち</h2>
+          <p class="section-header__subtitle">あなたのトレードを、そっと支える小さな味方</p>
+          <div class="divider-rainbow" aria-hidden="true"></div>
+        </div>
+
+        <div class="tools-grid">
+
+          <!-- Tool 01: JPTime_MarketClock -->
+          <article class="tool-card reveal" data-tool="01">
+            <div class="tool-card__body">
+              <div class="tool-card__head">
+                <div class="tool-card__icon" aria-hidden="true">🕐</div>
+                <span class="tool-card__num">#01</span>
+              </div>
+              <div>
+                <h3 class="tool-card__title">日本時間表示インジケーター</h3>
+                <code class="tool-card__code">JPTime_MarketClock</code>
+              </div>
+              <p class="tool-card__desc">サーバー時間と日本時間を併記表示。東京・ロンドン・NYの市場営業時間カウントダウン機能付き。夏時間自動判定対応。</p>
+              <div class="tool-card__meta" aria-label="ツール情報">
+                <dl>
+                  <dt>種別</dt>   <dd class="is-text">インジケーター</dd>
+                  <dt>ファイル</dt><dd>JPTime_MarketClock.mq4</dd>
+                  <dt>Ver.</dt>    <dd>v1.0</dd>
+                </dl>
+              </div>
+              <div class="tool-card__actions">
+                <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/JPTime_MarketClock.zip"
+                   class="btn btn--tool btn--block" download>📥 ダウンロード</a>
+                <a href="./docs/tool-01-jptime.html" class="btn btn--tool-outline btn--block">📄 仕様書を見る</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tool 02: RoundNumber_Alert -->
+          <article class="tool-card reveal" data-tool="02">
+            <div class="tool-card__body">
+              <div class="tool-card__head">
+                <div class="tool-card__icon" aria-hidden="true">🔔</div>
+                <span class="tool-card__num">#02</span>
+              </div>
+              <div>
+                <h3 class="tool-card__title">キリ番アラート</h3>
+                <code class="tool-card__code">RoundNumber_Alert</code>
+              </div>
+              <p class="tool-card__desc">00・50pipsなどのキリ番にラインを自動描画し、接近時・到達時にアラート発動。反発ポイント見逃し防止。</p>
+              <div class="tool-card__meta">
+                <dl>
+                  <dt>種別</dt>   <dd class="is-text">インジケーター</dd>
+                  <dt>ファイル</dt><dd>RoundNumber_Alert.mq4</dd>
+                  <dt>Ver.</dt>    <dd>v1.0</dd>
+                </dl>
+              </div>
+              <div class="tool-card__actions">
+                <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/RoundNumber_Alert.zip"
+                   class="btn btn--tool btn--block" download>📥 ダウンロード</a>
+                <a href="./docs/tool-02-roundnumber.html" class="btn btn--tool-outline btn--block">📄 仕様書を見る</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tool 03: EconomicCalendar_Countdown -->
+          <article class="tool-card reveal" data-tool="03">
+            <div class="tool-card__body">
+              <div class="tool-card__head">
+                <div class="tool-card__icon" aria-hidden="true">📅</div>
+                <span class="tool-card__num">#03</span>
+              </div>
+              <div>
+                <h3 class="tool-card__title">経済指標カウントダウン</h3>
+                <code class="tool-card__code">EconomicCalendar_Countdown</code>
+              </div>
+              <p class="tool-card__desc">次回の経済指標までのカウントダウンをチャート右上に表示。重要度別に色分け。発表前アラート機能付き。</p>
+              <div class="tool-card__meta">
+                <dl>
+                  <dt>種別</dt>   <dd class="is-text">インジケーター</dd>
+                  <dt>ファイル</dt><dd>EconomicCalendar_Countdown.mq4</dd>
+                  <dt>Ver.</dt>    <dd>v1.0</dd>
+                </dl>
+              </div>
+              <div class="tool-card__actions">
+                <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/EconomicCalendar_Countdown.zip"
+                   class="btn btn--tool btn--block" download>📥 ダウンロード</a>
+                <a href="./docs/tool-03-economic.html" class="btn btn--tool-outline btn--block">📄 仕様書を見る</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tool 04: LotCalculator_Panel -->
+          <article class="tool-card reveal" data-tool="04">
+            <div class="tool-card__body">
+              <div class="tool-card__head">
+                <div class="tool-card__icon" aria-hidden="true">🧮</div>
+                <span class="tool-card__num">#04</span>
+              </div>
+              <div>
+                <h3 class="tool-card__title">ロット計算機</h3>
+                <code class="tool-card__code">LotCalculator_Panel</code>
+              </div>
+              <p class="tool-card__desc">口座残高・リスク許容率・SL幅を入力すると、最適ロットサイズ・損失想定額・RR別利益額を自動計算。</p>
+              <div class="tool-card__meta">
+                <dl>
+                  <dt>種別</dt>   <dd class="is-text">ユーティリティEA</dd>
+                  <dt>ファイル</dt><dd>LotCalculator_Panel.mq4</dd>
+                  <dt>Ver.</dt>    <dd>v1.0</dd>
+                </dl>
+              </div>
+              <div class="tool-card__actions">
+                <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/LotCalculator_Panel.zip"
+                   class="btn btn--tool btn--block" download>📥 ダウンロード</a>
+                <a href="./docs/tool-04-lot.html" class="btn btn--tool-outline btn--block">📄 仕様書を見る</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tool 05: CorrelationMatrix_Monitor -->
+          <article class="tool-card reveal" data-tool="05">
+            <div class="tool-card__body">
+              <div class="tool-card__head">
+                <div class="tool-card__icon" aria-hidden="true">📊</div>
+                <span class="tool-card__num">#05</span>
+              </div>
+              <div>
+                <h3 class="tool-card__title">相関通貨ペアモニター</h3>
+                <code class="tool-card__code">CorrelationMatrix_Monitor</code>
+              </div>
+              <p class="tool-card__desc">主要通貨ペアの相関関係をマトリクス表示。ダイバージェンス発生時にアラート。リスク分散判断の補助に。</p>
+              <div class="tool-card__meta">
+                <dl>
+                  <dt>種別</dt>   <dd class="is-text">インジケーター</dd>
+                  <dt>ファイル</dt><dd>CorrelationMatrix_Monitor.mq4</dd>
+                  <dt>Ver.</dt>    <dd>v1.0</dd>
+                </dl>
+              </div>
+              <div class="tool-card__actions">
+                <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/CorrelationMatrix_Monitor.zip"
+                   class="btn btn--tool btn--block" download>📥 ダウンロード</a>
+                <a href="./docs/tool-05-correlation.html" class="btn btn--tool-outline btn--block">📄 仕様書を見る</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tool 06: VisualSLTP_Tool -->
+          <article class="tool-card reveal" data-tool="06">
+            <div class="tool-card__body">
+              <div class="tool-card__head">
+                <div class="tool-card__icon" aria-hidden="true">🎯</div>
+                <span class="tool-card__num">#06</span>
+              </div>
+              <div>
+                <h3 class="tool-card__title">ビジュアル損切り・利確ライン</h3>
+                <code class="tool-card__code">VisualSLTP_Tool</code>
+              </div>
+              <p class="tool-card__desc">エントリー・SL・TPをマウスドラッグで調整。pips数・損益額・リスクリワード比をリアルタイム表示。</p>
+              <div class="tool-card__meta">
+                <dl>
+                  <dt>種別</dt>   <dd class="is-text">ユーティリティEA</dd>
+                  <dt>ファイル</dt><dd>VisualSLTP_Tool.mq4</dd>
+                  <dt>Ver.</dt>    <dd>v1.0</dd>
+                </dl>
+              </div>
+              <div class="tool-card__actions">
+                <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/VisualSLTP_Tool.zip"
+                   class="btn btn--tool btn--block" download>📥 ダウンロード</a>
+                <a href="./docs/tool-06-sltp.html" class="btn btn--tool-outline btn--block">📄 仕様書を見る</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tool 07: OneClick_CloseAll -->
+          <article class="tool-card reveal" data-tool="07">
+            <div class="tool-card__body">
+              <div class="tool-card__head">
+                <div class="tool-card__icon" aria-hidden="true">⚡</div>
+                <span class="tool-card__num">#07</span>
+              </div>
+              <div>
+                <h3 class="tool-card__title">ワンクリック全決済</h3>
+                <code class="tool-card__code">OneClick_CloseAll</code>
+              </div>
+              <p class="tool-card__desc">全決済・買いのみ・売りのみ・建値以上・建値以下決済をワンクリックで実行。緊急時の冷静な操作を支援。</p>
+              <div class="tool-card__meta">
+                <dl>
+                  <dt>種別</dt>   <dd class="is-text">ユーティリティEA</dd>
+                  <dt>ファイル</dt><dd>OneClick_CloseAll.mq4</dd>
+                  <dt>Ver.</dt>    <dd>v1.0</dd>
+                </dl>
+              </div>
+              <div class="tool-card__actions">
+                <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/OneClick_CloseAll.zip"
+                   class="btn btn--tool btn--block" download>📥 ダウンロード</a>
+                <a href="./docs/tool-07-oneclick.html" class="btn btn--tool-outline btn--block">📄 仕様書を見る</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tool 08: PositionSize_Warning -->
+          <article class="tool-card reveal" data-tool="08">
+            <div class="tool-card__body">
+              <div class="tool-card__head">
+                <div class="tool-card__icon" aria-hidden="true">⚠️</div>
+                <span class="tool-card__num">#08</span>
+              </div>
+              <div>
+                <h3 class="tool-card__title">自動ポジションサイズ警告</h3>
+                <code class="tool-card__code">PositionSize_Warning</code>
+              </div>
+              <p class="tool-card__desc">口座残高に対する過大ロット発注・SL未設定・高レバレッジを検知し、3段階で警告。一撃退場を防ぐ守りのツール。</p>
+              <div class="tool-card__meta">
+                <dl>
+                  <dt>種別</dt>   <dd class="is-text">EA</dd>
+                  <dt>ファイル</dt><dd>PositionSize_Warning.mq4</dd>
+                  <dt>Ver.</dt>    <dd>v1.0</dd>
+                </dl>
+              </div>
+              <div class="tool-card__actions">
+                <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/PositionSize_Warning.zip"
+                   class="btn btn--tool btn--block" download>📥 ダウンロード</a>
+                <a href="./docs/tool-08-warning.html" class="btn btn--tool-outline btn--block">📄 仕様書を見る</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tool 09: MultiTF_TrendPanel -->
+          <article class="tool-card reveal" data-tool="09">
+            <div class="tool-card__body">
+              <div class="tool-card__head">
+                <div class="tool-card__icon" aria-hidden="true">📈</div>
+                <span class="tool-card__num">#09</span>
+              </div>
+              <div>
+                <h3 class="tool-card__title">複数時間足トレンド一覧</h3>
+                <code class="tool-card__code">MultiTF_TrendPanel</code>
+              </div>
+              <p class="tool-card__desc">複数時間足のトレンド方向を一覧表示。全時間足の一致度を算出し、強いトレンド発生時にアラート。</p>
+              <div class="tool-card__meta">
+                <dl>
+                  <dt>種別</dt>   <dd class="is-text">インジケーター</dd>
+                  <dt>ファイル</dt><dd>MultiTF_TrendPanel.mq4</dd>
+                  <dt>Ver.</dt>    <dd>v1.0</dd>
+                </dl>
+              </div>
+              <div class="tool-card__actions">
+                <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/MultiTF_TrendPanel.zip"
+                   class="btn btn--tool btn--block" download>📥 ダウンロード</a>
+                <a href="./docs/tool-09-multitf.html" class="btn btn--tool-outline btn--block">📄 仕様書を見る</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tool 10: CurrencyStrength_Meter -->
+          <article class="tool-card reveal" data-tool="10">
+            <div class="tool-card__body">
+              <div class="tool-card__head">
+                <div class="tool-card__icon" aria-hidden="true">💪</div>
+                <span class="tool-card__num">#10</span>
+              </div>
+              <div>
+                <h3 class="tool-card__title">通貨強弱メーター</h3>
+                <code class="tool-card__code">CurrencyStrength_Meter</code>
+              </div>
+              <p class="tool-card__desc">USD/EUR/JPY/GBP/AUD/NZD/CAD/CHFの強弱をバーグラフで可視化。最強×最弱の推奨ペアも提示。</p>
+              <div class="tool-card__meta">
+                <dl>
+                  <dt>種別</dt>   <dd class="is-text">インジケーター</dd>
+                  <dt>ファイル</dt><dd>CurrencyStrength_Meter.mq4</dd>
+                  <dt>Ver.</dt>    <dd>v1.0</dd>
+                </dl>
+              </div>
+              <div class="tool-card__actions">
+                <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/CurrencyStrength_Meter.zip"
+                   class="btn btn--tool btn--block" download>📥 ダウンロード</a>
+                <a href="./docs/tool-10-strength.html" class="btn btn--tool-outline btn--block">📄 仕様書を見る</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         一括DLセクション
+         ============================================================ -->
+    <section class="section" id="bulk" aria-labelledby="bulk-title">
+      <div class="bulk reveal">
+        <h2 id="bulk-title" class="bulk__title">まとめて、ぜんぶ手に入れる</h2>
+        <p class="bulk__subtitle">10ツール + 仕様書PDF + インストールガイド</p>
+        <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/FXKit_All.zip"
+           class="btn btn--rainbow-text btn--lg" download>
+          🎁 <span class="gradient-text">10ツール 一括ダウンロード</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         インストール方法
+         ============================================================ -->
+    <section class="section section--alt" id="install" aria-labelledby="install-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-header__eyebrow">Setup</span>
+          <h2 id="install-title" class="section-header__title">たった3ステップで導入完了</h2>
+          <p class="section-header__subtitle">複雑な設定は一切不要。初めての方でも5分で始められます。</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__num">1</div>
+            <div class="step__illust" aria-hidden="true">📦</div>
+            <h3 class="step__title">ダウンロード</h3>
+            <p class="step__desc">欲しいツールの「ダウンロード」ボタンを押してzipファイルを入手します。</p>
+          </div>
+          <div class="step reveal">
+            <div class="step__num">2</div>
+            <div class="step__illust" aria-hidden="true">📂</div>
+            <h3 class="step__title">MT4に配置</h3>
+            <p class="step__desc">MT4の「データフォルダを開く」→ MQL4 → Indicators または Experts に配置。</p>
+          </div>
+          <div class="step reveal">
+            <div class="step__num">3</div>
+            <div class="step__illust" aria-hidden="true">🚀</div>
+            <h3 class="step__title">チャートに適用</h3>
+            <p class="step__desc">MT4を再起動し、ナビゲーターからチャートへドラッグ&ドロップ。以上で完了！</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-header__eyebrow">FAQ</span>
+          <h2 id="faq-title" class="section-header__title">よくあるご質問</h2>
+        </div>
+        <div class="faq reveal">
+
+          <details class="faq__item">
+            <summary class="faq__q">本当に完全無料ですか?</summary>
+            <div class="faq__a"><p>はい、10ツールすべて完全無料です。メールアドレスの登録も不要で、このページからそのままダウンロードいただけます。商用利用・改変・再配布も自由です(著作権表示の削除のみご遠慮ください)。</p></div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">MT5でも使えますか?</summary>
+            <div class="faq__a"><p>現在はMT4(MetaTrader 4)専用となっております。MT5版は今後のリクエストに応じて検討予定です。ご要望があればYouTubeコメント等でお知らせください。</p></div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">商用利用はできますか?</summary>
+            <div class="faq__a"><p>はい、商用利用も可能です。トレードスクール、セミナー、有料コンテンツの中での利用も制限しておりません。ただし、本ツールそのものを有償で販売することはご遠慮ください。</p></div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">インストール方法がわかりません</summary>
+            <div class="faq__a"><p>各ツールの<a href="./docs/index.html">仕様書ページ</a>にステップバイステップの導入手順を記載しています。また、同梱の<code>README.md</code>に画像付きの解説があります。それでも解決しない場合はYouTubeチャンネルのコメント欄までお気軽に。</p></div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">ツールが表示されません</summary>
+            <div class="faq__a"><p>主に以下3点をご確認ください: ① MT4の「ツール→オプション→エキスパートアドバイザ」で自動売買が有効か、② zipを解凍した<code>.mq4</code>ファイルを正しいフォルダ(Indicators / Experts)に配置したか、③ MT4を再起動したか。</p></div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">アップデートはありますか?</summary>
+            <div class="faq__a"><p>不具合の修正や機能追加を随時行っています。YouTubeチャンネルで告知するので、ご登録いただけると最新情報をお届けできます。ダウンロードリンクは<code>/latest/</code>固定のため、常に最新版が取得されます。</p></div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">不具合やご要望の連絡先は?</summary>
+            <div class="faq__a"><p>不具合報告・機能要望は<strong>YouTubeチャンネルのコメント欄</strong>または動画概要欄の連絡先までお寄せください。可能な範囲で対応いたします。</p></div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         応援メッセージ
+         ============================================================ -->
+    <section class="cheer" aria-labelledby="cheer-title">
+      <div class="container reveal">
+        <h2 id="cheer-title" class="cheer__title">あなたのトレードが、<br>少しでも明るいものになりますように。🌈</h2>
+        <p><a href="https://www.youtube.com/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">▶︎ YouTubeチャンネルを覗く</a></p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         免責事項
+         ============================================================ -->
+    <section class="section section--tight" aria-labelledby="disc-title">
+      <div class="container">
+        <div class="note reveal" role="note">
+          <h2 id="disc-title" style="font-size:1rem;margin-bottom:0.5rem;color:inherit;">⚠️ 免責事項について</h2>
+          <p style="margin:0;">本サイトで配布するツールはトレード補助を目的とした無償ツールであり、投資収益を保証するものではありません。ツールを利用した投資判断・損益は全て利用者の自己責任となります。詳細は<a href="./disclaimer.html" style="color:inherit;text-decoration:underline;">免責事項ページ</a>をご確認ください。</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       フッター
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="./index.html" class="footer__logo" aria-label="Rainbow Project">
+          <img src="./assets/logo.svg" alt="" width="28" height="28">
+          <span>Rainbow Project</span>
+        </a>
+        <ul class="footer__links">
+          <li><a href="#tools">ツール一覧</a></li>
+          <li><a href="./about.html">プロジェクトについて</a></li>
+          <li><a href="./docs/index.html">仕様書</a></li>
+          <li><a href="./disclaimer.html">免責事項</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p class="footer__copy">© Rainbow Project. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer__bar" aria-hidden="true"></div>
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Rainbow Project - FX初心者お守りツールパック">
+  <title>Rainbow Project — FX初心者お守りツールパック</title>
+  <defs>
+    <linearGradient id="ogbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#FFF5F0"/>
+      <stop offset="50%" stop-color="#FDFCFB"/>
+      <stop offset="100%" stop-color="#F4F0FF"/>
+    </linearGradient>
+    <linearGradient id="ograinbow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#FF6B6B"/>
+      <stop offset="14%"  stop-color="#FFA94D"/>
+      <stop offset="28%"  stop-color="#FFD43B"/>
+      <stop offset="42%"  stop-color="#8CE99A"/>
+      <stop offset="56%"  stop-color="#63E6BE"/>
+      <stop offset="70%"  stop-color="#4DABF7"/>
+      <stop offset="84%"  stop-color="#9775FA"/>
+      <stop offset="100%" stop-color="#F783AC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="url(#ogbg)"/>
+
+  <!-- 上部虹色の帯 -->
+  <rect x="0" y="0" width="1200" height="8" fill="url(#ograinbow)"/>
+
+  <!-- 装飾: 背景に大きな半透明の虹アーチ -->
+  <g opacity="0.12" fill="none" stroke-linecap="round">
+    <path d="M 150 720 A 500 500 0 0 1 1050 720" stroke="#FF6B6B" stroke-width="40"/>
+    <path d="M 210 720 A 440 440 0 0 1 990 720" stroke="#FFA94D" stroke-width="40"/>
+    <path d="M 270 720 A 380 380 0 0 1 930 720" stroke="#FFD43B" stroke-width="40"/>
+    <path d="M 330 720 A 320 320 0 0 1 870 720" stroke="#8CE99A" stroke-width="40"/>
+    <path d="M 390 720 A 260 260 0 0 1 810 720" stroke="#4DABF7" stroke-width="40"/>
+    <path d="M 450 720 A 200 200 0 0 1 750 720" stroke="#9775FA" stroke-width="40"/>
+  </g>
+
+  <!-- ロゴ(中央上) -->
+  <g transform="translate(420 130)">
+    <g fill="none" stroke-linecap="round">
+      <path d="M 0 64 A 30 30 0 0 1 60 64" stroke="#FF6B6B" stroke-width="5"/>
+      <path d="M 5 64 A 25 25 0 0 1 55 64" stroke="#FFA94D" stroke-width="5"/>
+      <path d="M 10 64 A 20 20 0 0 1 50 64" stroke="#FFD43B" stroke-width="5"/>
+      <path d="M 15 64 A 15 15 0 0 1 45 64" stroke="#8CE99A" stroke-width="5"/>
+      <path d="M 20 64 A 10 10 0 0 1 40 64" stroke="#4DABF7" stroke-width="5"/>
+      <path d="M 25 64 A 5 5 0 0 1 35 64" stroke="#9775FA" stroke-width="5"/>
+    </g>
+    <ellipse cx="5" cy="64.5" rx="7" ry="2.5" fill="#FDFCFB"/>
+    <ellipse cx="55" cy="64.5" rx="7" ry="2.5" fill="#FDFCFB"/>
+    <text x="90" y="52"
+          font-family="Inter, 'Noto Sans JP', system-ui, sans-serif"
+          font-size="28" font-weight="700" fill="#2D3142"
+          letter-spacing="-0.01em">Rainbow Project</text>
+    <text x="90" y="82"
+          font-family="Inter, 'Noto Sans JP', system-ui, sans-serif"
+          font-size="16" font-weight="500" fill="#6C7086"
+          letter-spacing="0.12em">FX BEGINNER'S PROTECTION TOOLS</text>
+  </g>
+
+  <!-- メインタイトル -->
+  <text x="600" y="340"
+        text-anchor="middle"
+        font-family="'Noto Sans JP', Inter, sans-serif"
+        font-size="64"
+        font-weight="800"
+        fill="#2D3142"
+        letter-spacing="-0.02em">FX初心者お守りツールパック</text>
+
+  <!-- サブタイトル -->
+  <text x="600" y="400"
+        text-anchor="middle"
+        font-family="'Noto Sans JP', Inter, sans-serif"
+        font-size="26"
+        font-weight="500"
+        fill="#6C7086">迷わない、焦らない、損しない。</text>
+  <text x="600" y="438"
+        text-anchor="middle"
+        font-family="'Noto Sans JP', Inter, sans-serif"
+        font-size="26"
+        font-weight="500"
+        fill="#6C7086">はじめてのFXに、10の小さな守り神を。</text>
+
+  <!-- バッジ -->
+  <g transform="translate(600 498)">
+    <rect x="-240" y="0" width="480" height="56" rx="28" ry="28"
+          fill="url(#ograinbow)"/>
+    <text x="0" y="36" text-anchor="middle"
+          font-family="'Noto Sans JP', Inter, sans-serif"
+          font-size="22" font-weight="700" fill="#ffffff"
+          letter-spacing="0.04em">🎁 10ツール すべて無料配布</text>
+  </g>
+
+  <!-- 最下部テキスト -->
+  <text x="600" y="598"
+        text-anchor="middle"
+        font-family="Inter, sans-serif"
+        font-size="14" fill="#9CA3AF" letter-spacing="0.18em">RAINBOW-FXKIT.GITHUB.IO</text>
+</svg>

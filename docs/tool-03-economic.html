@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>経済指標カウントダウン — 仕様書 | Rainbow Project</title>
+  <meta name="description" content="EconomicCalendar_Countdown の仕様書。次回の重要経済指標までの残り時間を常時表示し、発表前にアラートを発動するインジケーター。">
+  <meta name="theme-color" content="#FFD43B">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-tool="03">
+  <a href="#main" class="skip-link">本文へスキップ</a>
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../assets/logo.svg" alt="" width="32" height="32"><span>Rainbow Project</span></a>
+      <button class="nav__toggle" type="button" aria-label="メニューを開閉" aria-controls="nav-menu" aria-expanded="false"><span aria-hidden="true"></span></button>
+      <nav aria-label="メインナビゲーション"><ul class="nav__menu" id="nav-menu">
+        <li><a href="../index.html#tools">ツール一覧</a></li>
+        <li><a href="../about.html">プロジェクトについて</a></li>
+        <li><a href="./index.html">仕様書</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="../index.html#bulk" class="nav__cta">🎁 一括DL</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="docs-layout">
+      <aside class="docs-sidebar" aria-label="ツールナビゲーション">
+        <a class="docs-sidebar__back" href="../index.html">🌈 配布ページに戻る</a>
+        <p class="docs-sidebar__heading">10 の 仕様書</p>
+        <ul class="docs-sidebar__list">
+          <li><a data-tool="01" href="./tool-01-jptime.html"><span class="docs-sidebar__dot"></span>日本時間表示</a></li>
+          <li><a data-tool="02" href="./tool-02-roundnumber.html"><span class="docs-sidebar__dot"></span>キリ番アラート</a></li>
+          <li><a class="is-active" data-tool="03" href="./tool-03-economic.html"><span class="docs-sidebar__dot"></span>経済指標</a></li>
+          <li><a data-tool="04" href="./tool-04-lot.html"><span class="docs-sidebar__dot"></span>ロット計算</a></li>
+          <li><a data-tool="05" href="./tool-05-correlation.html"><span class="docs-sidebar__dot"></span>相関モニター</a></li>
+          <li><a data-tool="06" href="./tool-06-sltp.html"><span class="docs-sidebar__dot"></span>ビジュアルSL/TP</a></li>
+          <li><a data-tool="07" href="./tool-07-oneclick.html"><span class="docs-sidebar__dot"></span>ワンクリック決済</a></li>
+          <li><a data-tool="08" href="./tool-08-warning.html"><span class="docs-sidebar__dot"></span>サイズ警告</a></li>
+          <li><a data-tool="09" href="./tool-09-multitf.html"><span class="docs-sidebar__dot"></span>複数時間足</a></li>
+          <li><a data-tool="10" href="./tool-10-strength.html"><span class="docs-sidebar__dot"></span>通貨強弱</a></li>
+        </ul>
+        <a class="docs-sidebar__cta" href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/FXKit_All.zip" download>🎁 10ツール 一括DL</a>
+      </aside>
+
+      <article class="docs-main">
+        <nav aria-label="パンくず" class="breadcrumbs">
+          <a href="../index.html">トップ</a><a href="./index.html">仕様書</a><span>経済指標カウントダウン</span>
+        </nav>
+        <header class="docs-hero">
+          <div class="docs-hero__icon" aria-hidden="true">📅</div>
+          <span class="docs-hero__eyebrow">#03 · INDICATOR</span>
+          <h1 class="docs-hero__title">経済指標カウントダウン</h1>
+          <p class="docs-hero__sub"><code>EconomicCalendar_Countdown</code> — 重要経済指標までの残り時間を常時可視化</p>
+        </header>
+
+        <section class="docs-block">
+          <h2>概要</h2>
+          <p>経済指標発表の直前直後は値動きが激しく、知らずにエントリーして飛ばされる事故が後を絶ちません。本インジケーターは次回の主要経済指標までのカウントダウンをチャート右上に常時表示し、指定時間前にアラートを鳴らします。重要度別に色分けされるので一目で判断できます。</p>
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/EconomicCalendar_Countdown.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+          <div class="screenshot-placeholder">スクリーンショット(後日差し替え)</div>
+        </section>
+
+        <section class="docs-block">
+          <h2>主な機能</h2>
+          <ul class="feature-list">
+            <li>次回の重要経済指標までのカウントダウン表示(HH:MM:SS)</li>
+            <li>重要度(★★★ / ★★ / ★)別の色分け表示</li>
+            <li>指定時間前にポップアップ・サウンド・プッシュ通知でアラート</li>
+            <li>表示対象通貨のフィルタリング(USD/EUR/JPY/GBP 等)</li>
+            <li>設定ファイル(CSV)で指標スケジュールをユーザー編集可能</li>
+            <li>表示コーナー・フォント・色をカスタマイズ可能</li>
+          </ul>
+        </section>
+
+        <section class="docs-block">
+          <h2>使い方</h2>
+          <ol class="step-list">
+            <li>zipを解凍し<code>EconomicCalendar_Countdown.mq4</code>と同梱CSVを取り出す</li>
+            <li>MT4「データフォルダを開く」→ MQL4 → Indicators に配置、CSVは MQL4 → Files に配置</li>
+            <li>MT4を再起動してチャートへドラッグ</li>
+            <li>対象通貨・重要度のフィルタを設定</li>
+            <li>必要に応じてCSVを編集して最新の指標予定を反映</li>
+          </ol>
+        </section>
+
+        <section class="docs-block">
+          <h2>パラメーター</h2>
+          <table class="params-table">
+            <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
+            <tbody>
+              <tr><td>ECC_CsvFileName</td><td class="t-type">string</td><td class="t-default">"calendar.csv"</td><td>指標スケジュールのCSVファイル名</td></tr>
+              <tr><td>ECC_FilterCurrencies</td><td class="t-type">string</td><td class="t-default">"USD,EUR,JPY"</td><td>表示対象通貨(カンマ区切り)</td></tr>
+              <tr><td>ECC_MinImportance</td><td class="t-type">int</td><td class="t-default">2</td><td>表示する最低重要度(1〜3)</td></tr>
+              <tr><td>ECC_AlertMinutesBefore</td><td class="t-type">int</td><td class="t-default">15</td><td>何分前にアラートを鳴らすか</td></tr>
+              <tr><td>ECC_UseAlert</td><td class="t-type">bool</td><td class="t-default">true</td><td>ポップアップアラートを有効化</td></tr>
+              <tr><td>ECC_UsePush</td><td class="t-type">bool</td><td class="t-default">false</td><td>プッシュ通知を有効化</td></tr>
+              <tr><td>ECC_DisplayCorner</td><td class="t-type">enum</td><td class="t-default">RIGHT_UPPER</td><td>表示位置</td></tr>
+              <tr><td>ECC_ColorHigh</td><td class="t-type">color</td><td class="t-default">clrOrangeRed</td><td>重要度★★★の色</td></tr>
+              <tr><td>ECC_ColorMid</td><td class="t-type">color</td><td class="t-default">clrGold</td><td>重要度★★の色</td></tr>
+              <tr><td>ECC_ColorLow</td><td class="t-type">color</td><td class="t-default">clrSilver</td><td>重要度★の色</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="docs-block">
+          <h2>注意事項</h2>
+          <div class="note" role="note"><p>⚠️ 指標スケジュールCSVはユーザー自身で定期的に更新が必要です。予定変更や臨時発表には対応できません。重要な取引判断の前には必ず公式カレンダーでご確認ください。</p></div>
+        </section>
+
+        <section class="docs-block">
+          <h2>このツールのFAQ</h2>
+          <div class="faq">
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">CSVファイルのフォーマットは?</summary><div class="faq__a"><p>同梱の<code>calendar_sample.csv</code>をご参照ください。日時(UTC)、通貨、指標名、重要度(1-3)の4列です。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">カウントダウンが表示されません</summary><div class="faq__a"><p>CSVが<code>Files</code>フォルダにあるか、<code>ECC_FilterCurrencies</code>が適切か、今後のイベントがCSVに含まれているかご確認ください。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">指標データを自動取得できますか?</summary><div class="faq__a"><p>Web通信には対応していません。手動でCSVを更新する運用を想定しています。</p></div></details>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <h2>関連ツール</h2>
+          <div class="related-tools">
+            <a class="related-tools__item" data-tool="01" href="./tool-01-jptime.html"><span class="related-tools__dot"></span>日本時間表示インジケーター</a>
+            <a class="related-tools__item" data-tool="08" href="./tool-08-warning.html"><span class="related-tools__dot"></span>自動ポジションサイズ警告</a>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/EconomicCalendar_Countdown.zip" class="btn btn--tool btn--lg" download>📥 ダウンロード</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo"><img src="../assets/logo.svg" alt="" width="28" height="28"><span>Rainbow Project</span></a>
+        <ul class="footer__links">
+          <li><a href="../index.html#tools">ツール一覧</a>
+          <li><a href="../about.html">プロジェクトについて</a></li>
+          <li><a href="./index.html">仕様書</a></li>
+          <li><a href="../disclaimer.html">免責事項</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p class="footer__copy">© Rainbow Project. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer__bar" aria-hidden="true"></div>
+  </footer>
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

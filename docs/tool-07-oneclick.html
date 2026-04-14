@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ワンクリック全決済 — 仕様書 | Rainbow Project</title>
+  <meta name="description" content="OneClick_CloseAll の仕様書。全決済・買い/売りのみ・建値以上/以下決済をワンクリックで実行するユーティリティEA。">
+  <meta name="theme-color" content="#748FFC">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-tool="07">
+  <a href="#main" class="skip-link">本文へスキップ</a>
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../assets/logo.svg" alt="" width="32" height="32"><span>Rainbow Project</span></a>
+      <button class="nav__toggle" type="button" aria-label="メニューを開閉" aria-controls="nav-menu" aria-expanded="false"><span aria-hidden="true"></span></button>
+      <nav aria-label="メインナビゲーション"><ul class="nav__menu" id="nav-menu">
+        <li><a href="../index.html#tools">ツール一覧</a></li>
+        <li><a href="../about.html">プロジェクトについて</a></li>
+        <li><a href="./index.html">仕様書</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="../index.html#bulk" class="nav__cta">🎁 一括DL</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="docs-layout">
+      <aside class="docs-sidebar" aria-label="ツールナビゲーション">
+        <a class="docs-sidebar__back" href="../index.html">🌈 配布ページに戻る</a>
+        <p class="docs-sidebar__heading">10 の 仕様書</p>
+        <ul class="docs-sidebar__list">
+          <li><a data-tool="01" href="./tool-01-jptime.html"><span class="docs-sidebar__dot"></span>日本時間表示</a></li>
+          <li><a data-tool="02" href="./tool-02-roundnumber.html"><span class="docs-sidebar__dot"></span>キリ番アラート</a></li>
+          <li><a data-tool="03" href="./tool-03-economic.html"><span class="docs-sidebar__dot"></span>経済指標</a></li>
+          <li><a data-tool="04" href="./tool-04-lot.html"><span class="docs-sidebar__dot"></span>ロット計算</a></li>
+          <li><a data-tool="05" href="./tool-05-correlation.html"><span class="docs-sidebar__dot"></span>相関モニター</a></li>
+          <li><a data-tool="06" href="./tool-06-sltp.html"><span class="docs-sidebar__dot"></span>ビジュアルSL/TP</a></li>
+          <li><a class="is-active" data-tool="07" href="./tool-07-oneclick.html"><span class="docs-sidebar__dot"></span>ワンクリック決済</a></li>
+          <li><a data-tool="08" href="./tool-08-warning.html"><span class="docs-sidebar__dot"></span>サイズ警告</a></li>
+          <li><a data-tool="09" href="./tool-09-multitf.html"><span class="docs-sidebar__dot"></span>複数時間足</a></li>
+          <li><a data-tool="10" href="./tool-10-strength.html"><span class="docs-sidebar__dot"></span>通貨強弱</a></li>
+        </ul>
+        <a class="docs-sidebar__cta" href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/FXKit_All.zip" download>🎁 10ツール 一括DL</a>
+      </aside>
+
+      <article class="docs-main">
+        <nav aria-label="パンくず" class="breadcrumbs">
+          <a href="../index.html">トップ</a><a href="./index.html">仕様書</a><span>ワンクリック全決済</span>
+        </nav>
+        <header class="docs-hero">
+          <div class="docs-hero__icon" aria-hidden="true">⚡</div>
+          <span class="docs-hero__eyebrow">#07 · UTILITY EA</span>
+          <h1 class="docs-hero__title">ワンクリック全決済</h1>
+          <p class="docs-hero__sub"><code>OneClick_CloseAll</code> — 複数の決済オプションをボタン一発で実行、緊急時の冷静な操作を支援</p>
+        </header>
+
+        <section class="docs-block">
+          <h2>概要</h2>
+          <p>複数ポジション保有中にパニックになり、個別決済を繰り返している間に相場がさらに動いて損失を拡大させる——これは多くの初心者が経験する悲劇です。本ツールはチャート上にボタンパネルを表示し、全決済・買いのみ・売りのみ・建値以上/以下決済などをワンクリックで実行できるようにします。</p>
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/OneClick_CloseAll.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+          <div class="screenshot-placeholder">スクリーンショット(後日差し替え)</div>
+        </section>
+
+        <section class="docs-block">
+          <h2>主な機能</h2>
+          <ul class="feature-list">
+            <li>全決済ボタン: 口座内の全ポジションを一括決済</li>
+            <li>買いのみ/売りのみ: 片方向だけを決済</li>
+            <li>建値以上決済: 含み益のポジションのみ決済(利益確保)</li>
+            <li>建値以下決済: 含み損のポジションのみ決済(損切り切替)</li>
+            <li>同一通貨ペアのみ/全ペア対象の切替</li>
+            <li>実行前に「本当に決済しますか?」確認ダイアログ</li>
+            <li>マジックナンバーフィルタで特定EA由来のポジションだけ決済可能</li>
+          </ul>
+        </section>
+
+        <section class="docs-block">
+          <h2>使い方</h2>
+          <ol class="step-list">
+            <li>zipを解凍し<code>OneClick_CloseAll.mq4</code>を取り出す</li>
+            <li>MT4「データフォルダを開く」→ MQL4 → Experts に配置</li>
+            <li>自動売買を有効化してチャートにドラッグ</li>
+            <li>パネルのボタンで決済種別を選択</li>
+            <li>確認ダイアログで「はい」を押すと決済実行</li>
+          </ol>
+        </section>
+
+        <section class="docs-block">
+          <h2>パラメーター</h2>
+          <table class="params-table">
+            <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
+            <tbody>
+              <tr><td>OCA_CurrentSymbolOnly</td><td class="t-type">bool</td><td class="t-default">true</td><td>現在のチャートの通貨ペアのみ対象にする</td></tr>
+              <tr><td>OCA_FilterMagic</td><td class="t-type">int</td><td class="t-default">0</td><td>対象マジックナンバー(0=全て)</td></tr>
+              <tr><td>OCA_ConfirmBeforeClose</td><td class="t-type">bool</td><td class="t-default">true</td><td>決済前に確認ダイアログを表示</td></tr>
+              <tr><td>OCA_PanelCorner</td><td class="t-type">enum</td><td class="t-default">RIGHT_LOWER</td><td>パネルの表示位置</td></tr>
+              <tr><td>OCA_ButtonSize</td><td class="t-type">int</td><td class="t-default">120</td><td>ボタン幅(px)</td></tr>
+              <tr><td>OCA_Slippage</td><td class="t-type">int</td><td class="t-default">10</td><td>決済時の許容スリッページ(point)</td></tr>
+              <tr><td>OCA_MaxRetry</td><td class="t-type">int</td><td class="t-default">3</td><td>決済失敗時の再試行回数</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="docs-block">
+          <h2>注意事項</h2>
+          <div class="note" role="note"><p>⚠️ 本ツールは実際の決済処理を行います。誤操作防止のため確認ダイアログをオンにしておくことを強く推奨します。大荒れ相場ではスプレッド拡大で想定外の価格で約定する可能性がある点にもご注意ください。</p></div>
+        </section>
+
+        <section class="docs-block">
+          <h2>このツールのFAQ</h2>
+          <div class="faq">
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">「取引が許可されていません」エラーが出ます</summary><div class="faq__a"><p>MT4の「自動売買」ボタンを有効化し、ツールのプロパティ「全般」タブで「自動売買を許可」のチェックが入っているかご確認ください。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">一部のポジションが決済されません</summary><div class="faq__a"><p><code>OCA_CurrentSymbolOnly</code>がtrueだと他ペアは対象外です。全ペア決済したい場合はfalseに。また、再試行しても失敗した場合はエキスパートログをご確認ください。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">ボタンパネルをチャート外に追い出したい</summary><div class="faq__a"><p>パネルは現在のチャート内にのみ表示できます。フローティングは非対応です。</p></div></details>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <h2>関連ツール</h2>
+          <div class="related-tools">
+            <a class="related-tools__item" data-tool="06" href="./tool-06-sltp.html"><span class="related-tools__dot"></span>ビジュアル損切り・利確ライン</a>
+            <a class="related-tools__item" data-tool="08" href="./tool-08-warning.html"><span class="related-tools__dot"></span>自動ポジションサイズ警告</a>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/OneClick_CloseAll.zip" class="btn btn--tool btn--lg" download>📥 ダウンロード</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo"><img src="../assets/logo.svg" alt="" width="28" height="28"><span>Rainbow Project</span></a>
+        <ul class="footer__links">
+          <li><a href="../index.html#tools">ツール一覧</a></li>
+          <li><a href="../about.html">プロジェクトについて</a></li>
+          <li><a href="./index.html">仕様書</a></li>
+          <li><a href="../disclaimer.html">免責事項</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p class="footer__copy">© Rainbow Project. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer__bar" aria-hidden="true"></div>
+  </footer>
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

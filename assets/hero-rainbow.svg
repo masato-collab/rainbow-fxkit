@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="presentation" aria-hidden="true">
+  <!-- ヒーロー右上に配置する装飾用の虹アーチ(円形)
+       60秒でゆっくり回転するためviewBoxは正方形 -->
+  <g fill="none" stroke-linecap="round" transform="translate(300 300)">
+    <circle r="250" stroke="#FF6B6B" stroke-width="14" stroke-opacity="0.55"
+            stroke-dasharray="420 1200" transform="rotate(-90)"/>
+    <circle r="220" stroke="#FFA94D" stroke-width="14" stroke-opacity="0.55"
+            stroke-dasharray="370 1200" transform="rotate(-75)"/>
+    <circle r="190" stroke="#FFD43B" stroke-width="14" stroke-opacity="0.55"
+            stroke-dasharray="320 1200" transform="rotate(-60)"/>
+    <circle r="160" stroke="#8CE99A" stroke-width="14" stroke-opacity="0.55"
+            stroke-dasharray="270 1200" transform="rotate(-45)"/>
+    <circle r="130" stroke="#63E6BE" stroke-width="14" stroke-opacity="0.55"
+            stroke-dasharray="220 1200" transform="rotate(-30)"/>
+    <circle r="100" stroke="#4DABF7" stroke-width="14" stroke-opacity="0.55"
+            stroke-dasharray="170 1200" transform="rotate(-15)"/>
+    <circle r="70"  stroke="#9775FA" stroke-width="14" stroke-opacity="0.55"
+            stroke-dasharray="120 1200"/>
+  </g>
+</svg>

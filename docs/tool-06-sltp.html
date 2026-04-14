@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ビジュアル損切り・利確ライン — 仕様書 | Rainbow Project</title>
+  <meta name="description" content="VisualSLTP_Tool の仕様書。SL/TPをマウスドラッグで調整し、pips数・損益額・RR比をリアルタイム表示するユーティリティEA。">
+  <meta name="theme-color" content="#4DABF7">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-tool="06">
+  <a href="#main" class="skip-link">本文へスキップ</a>
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../assets/logo.svg" alt="" width="32" height="32"><span>Rainbow Project</span></a>
+      <button class="nav__toggle" type="button" aria-label="メニューを開閉" aria-controls="nav-menu" aria-expanded="false"><span aria-hidden="true"></span></button>
+      <nav aria-label="メインナビゲーション"><ul class="nav__menu" id="nav-menu">
+        <li><a href="../index.html#tools">ツール一覧</a></li>
+        <li><a href="../about.html">プロジェクトについて</a></li>
+        <li><a href="./index.html">仕様書</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="../index.html#bulk" class="nav__cta">🎁 一括DL</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="docs-layout">
+      <aside class="docs-sidebar" aria-label="ツールナビゲーション">
+        <a class="docs-sidebar__back" href="../index.html">🌈 配布ページに戻る</a>
+        <p class="docs-sidebar__heading">10 の 仕様書</p>
+        <ul class="docs-sidebar__list">
+          <li><a data-tool="01" href="./tool-01-jptime.html"><span class="docs-sidebar__dot"></span>日本時間表示</a></li>
+          <li><a data-tool="02" href="./tool-02-roundnumber.html"><span class="docs-sidebar__dot"></span>キリ番アラート</a></li>
+          <li><a data-tool="03" href="./tool-03-economic.html"><span class="docs-sidebar__dot"></span>経済指標</a></li>
+          <li><a data-tool="04" href="./tool-04-lot.html"><span class="docs-sidebar__dot"></span>ロット計算</a></li>
+          <li><a data-tool="05" href="./tool-05-correlation.html"><span class="docs-sidebar__dot"></span>相関モニター</a></li>
+          <li><a class="is-active" data-tool="06" href="./tool-06-sltp.html"><span class="docs-sidebar__dot"></span>ビジュアルSL/TP</a></li>
+          <li><a data-tool="07" href="./tool-07-oneclick.html"><span class="docs-sidebar__dot"></span>ワンクリック決済</a></li>
+          <li><a data-tool="08" href="./tool-08-warning.html"><span class="docs-sidebar__dot"></span>サイズ警告</a></li>
+          <li><a data-tool="09" href="./tool-09-multitf.html"><span class="docs-sidebar__dot"></span>複数時間足</a></li>
+          <li><a data-tool="10" href="./tool-10-strength.html"><span class="docs-sidebar__dot"></span>通貨強弱</a></li>
+        </ul>
+        <a class="docs-sidebar__cta" href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/FXKit_All.zip" download>🎁 10ツール 一括DL</a>
+      </aside>
+
+      <article class="docs-main">
+        <nav aria-label="パンくず" class="breadcrumbs">
+          <a href="../index.html">トップ</a><a href="./index.html">仕様書</a><span>ビジュアル損切り・利確ライン</span>
+        </nav>
+        <header class="docs-hero">
+          <div class="docs-hero__icon" aria-hidden="true">🎯</div>
+          <span class="docs-hero__eyebrow">#06 · UTILITY EA</span>
+          <h1 class="docs-hero__title">ビジュアル損切り・利確ライン</h1>
+          <p class="docs-hero__sub"><code>VisualSLTP_Tool</code> — SL/TPラインをドラッグで直感調整、損益が即可視化</p>
+        </header>
+
+        <section class="docs-block">
+          <h2>概要</h2>
+          <p>エントリー・SL・TPラインをチャート上にドラッグ&ドロップで配置できるビジュアルツールです。線を動かすごとに、pips数・損益額(円換算)・リスクリワード比率がリアルタイム更新されるため、「今このラインだと損失いくらか」を数字で把握しながらプラニングできます。</p>
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/VisualSLTP_Tool.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+          <div class="screenshot-placeholder">スクリーンショット(後日差し替え)</div>
+        </section>
+
+        <section class="docs-block">
+          <h2>主な機能</h2>
+          <ul class="feature-list">
+            <li>エントリー / SL / TPの3本のラインをチャート上にドラッグ配置</li>
+            <li>ライン移動ごとにpips数・損益額・RR比をリアルタイム表示</li>
+            <li>想定ロットを入力すると損益額が円・USDで試算される</li>
+            <li>エントリー方向(買い/売り)の切替ボタン</li>
+            <li>現在のSL/TP設定を既存ポジションに一括反映するボタン</li>
+            <li>塗りつぶしで利益エリア(緑)/損失エリア(赤)を視覚化</li>
+          </ul>
+        </section>
+
+        <section class="docs-block">
+          <h2>使い方</h2>
+          <ol class="step-list">
+            <li>zipを解凍し<code>VisualSLTP_Tool.mq4</code>を取り出す</li>
+            <li>MT4「データフォルダを開く」→ MQL4 → Experts に配置</li>
+            <li>自動売買を有効化してチャートにドラッグ</li>
+            <li>3本のラインをドラッグしてSL/TPを決定</li>
+            <li>「既存ポジションに適用」ボタンで実際のSL/TPに反映</li>
+          </ol>
+        </section>
+
+        <section class="docs-block">
+          <h2>パラメーター</h2>
+          <table class="params-table">
+            <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
+            <tbody>
+              <tr><td>VST_DefaultLots</td><td class="t-type">double</td><td class="t-default">0.10</td><td>試算に使う初期ロット</td></tr>
+              <tr><td>VST_Direction</td><td class="t-type">enum</td><td class="t-default">BUY</td><td>起動時のエントリー方向</td></tr>
+              <tr><td>VST_EntryColor</td><td class="t-type">color</td><td class="t-default">clrYellow</td><td>エントリーラインの色</td></tr>
+              <tr><td>VST_SLColor</td><td class="t-type">color</td><td class="t-default">clrTomato</td><td>SLラインの色</td></tr>
+              <tr><td>VST_TPColor</td><td class="t-type">color</td><td class="t-default">clrMediumSeaGreen</td><td>TPラインの色</td></tr>
+              <tr><td>VST_FillProfitArea</td><td class="t-type">bool</td><td class="t-default">true</td><td>利益/損失エリアを塗りつぶす</td></tr>
+              <tr><td>VST_AutoApplyToPositions</td><td class="t-type">bool</td><td class="t-default">false</td><td>線移動で既存ポジションに自動反映(確認ダイアログ付き)</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="docs-block">
+          <h2>注意事項</h2>
+          <div class="note" role="note"><p>⚠️ 「既存ポジションに適用」ボタンは実際のSL/TP変更処理を行います。意図しないポジションに反映されないよう、通貨ペア・マジックナンバーを事前に確認してください。</p></div>
+        </section>
+
+        <section class="docs-block">
+          <h2>このツールのFAQ</h2>
+          <div class="faq">
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">ラインが表示されません</summary><div class="faq__a"><p>自動売買が有効になっているかご確認ください。また、パラメーター<code>VST_Direction</code>に応じて3本のラインがチャート中央付近に生成されます。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">RR比が計算されません</summary><div class="faq__a"><p>SLとエントリー間の距離が0の場合は計算できません。SLをエントリーから少し離してください。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">複数ポジションに一括適用したい</summary><div class="faq__a"><p>マジックナンバーフィルタを指定すれば、該当するポジションだけに一括反映可能です。</p></div></details>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <h2>関連ツール</h2>
+          <div class="related-tools">
+            <a class="related-tools__item" data-tool="04" href="./tool-04-lot.html"><span class="related-tools__dot"></span>ロット計算機</a>
+            <a class="related-tools__item" data-tool="07" href="./tool-07-oneclick.html"><span class="related-tools__dot"></span>ワンクリック全決済</a>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/VisualSLTP_Tool.zip" class="btn btn--tool btn--lg" download>📥 ダウンロード</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo"><img src="../assets/logo.svg" alt="" width="28" height="28"><span>Rainbow Project</span></a>
+        <ul class="footer__links">
+          <li><a href="../index.html#tools">ツール一覧</a></li>
+          <li><a href="../about.html">プロジェクトについて</a></li>
+          <li><a href="./index.html">仕様書</a></li>
+          <li><a href="../disclaimer.html">免責事項</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p class="footer__copy">© Rainbow Project. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer__bar" aria-hidden="true"></div>
+  </footer>
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

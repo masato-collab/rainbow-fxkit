@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>通貨強弱メーター — 仕様書 | Rainbow Project</title>
+  <meta name="description" content="CurrencyStrength_Meter の仕様書。主要8通貨(USD/EUR/JPY/GBP/AUD/NZD/CAD/CHF)の強弱をバーグラフでランキング表示するインジケーター。">
+  <meta name="theme-color" content="#F783AC">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-tool="10">
+  <a href="#main" class="skip-link">本文へスキップ</a>
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../assets/logo.svg" alt="" width="32" height="32"><span>Rainbow Project</span></a>
+      <button class="nav__toggle" type="button" aria-label="メニューを開閉" aria-controls="nav-menu" aria-expanded="false"><span aria-hidden="true"></span></button>
+      <nav aria-label="メインナビゲーション"><ul class="nav__menu" id="nav-menu">
+        <li><a href="../index.html#tools">ツール一覧</a></li>
+        <li><a href="../about.html">プロジェクトについて</a></li>
+        <li><a href="./index.html">仕様書</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="../index.html#bulk" class="nav__cta">🎁 一括DL</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="docs-layout">
+      <aside class="docs-sidebar" aria-label="ツールナビゲーション">
+        <a class="docs-sidebar__back" href="../index.html">🌈 配布ページに戻る</a>
+        <p class="docs-sidebar__heading">10 の 仕様書</p>
+        <ul class="docs-sidebar__list">
+          <li><a data-tool="01" href="./tool-01-jptime.html"><span class="docs-sidebar__dot"></span>日本時間表示</a></li>
+          <li><a data-tool="02" href="./tool-02-roundnumber.html"><span class="docs-sidebar__dot"></span>キリ番アラート</a></li>
+          <li><a data-tool="03" href="./tool-03-economic.html"><span class="docs-sidebar__dot"></span>経済指標</a></li>
+          <li><a data-tool="04" href="./tool-04-lot.html"><span class="docs-sidebar__dot"></span>ロット計算</a></li>
+          <li><a data-tool="05" href="./tool-05-correlation.html"><span class="docs-sidebar__dot"></span>相関モニター</a></li>
+          <li><a data-tool="06" href="./tool-06-sltp.html"><span class="docs-sidebar__dot"></span>ビジュアルSL/TP</a></li>
+          <li><a data-tool="07" href="./tool-07-oneclick.html"><span class="docs-sidebar__dot"></span>ワンクリック決済</a></li>
+          <li><a data-tool="08" href="./tool-08-warning.html"><span class="docs-sidebar__dot"></span>サイズ警告</a></li>
+          <li><a data-tool="09" href="./tool-09-multitf.html"><span class="docs-sidebar__dot"></span>複数時間足</a></li>
+          <li><a class="is-active" data-tool="10" href="./tool-10-strength.html"><span class="docs-sidebar__dot"></span>通貨強弱</a></li>
+        </ul>
+        <a class="docs-sidebar__cta" href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/FXKit_All.zip" download>🎁 10ツール 一括DL</a>
+      </aside>
+
+      <article class="docs-main">
+        <nav aria-label="パンくず" class="breadcrumbs">
+          <a href="../index.html">トップ</a><a href="./index.html">仕様書</a><span>通貨強弱メーター</span>
+        </nav>
+        <header class="docs-hero">
+          <div class="docs-hero__icon" aria-hidden="true">💪</div>
+          <span class="docs-hero__eyebrow">#10 · INDICATOR</span>
+          <h1 class="docs-hero__title">通貨強弱メーター</h1>
+          <p class="docs-hero__sub"><code>CurrencyStrength_Meter</code> — 主要8通貨の強弱をランキング表示、最強×最弱ペアを自動提示</p>
+        </header>
+
+        <section class="docs-block">
+          <h2>概要</h2>
+          <p>「どの通貨ペアをトレードすべきか」の判断に役立つのが通貨強弱です。本インジケーターはUSD/EUR/JPY/GBP/AUD/NZD/CAD/CHFの主要8通貨の強弱を計算し、バーグラフでランキング表示。同時に「最強通貨×最弱通貨」の組み合わせを推奨ペアとして提示します。</p>
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/CurrencyStrength_Meter.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+          <div class="screenshot-placeholder">スクリーンショット(後日差し替え)</div>
+        </section>
+
+        <section class="docs-block">
+          <h2>主な機能</h2>
+          <ul class="feature-list">
+            <li>主要8通貨の強弱をバーグラフで可視化</li>
+            <li>強さランキング(1位〜8位)を数値付きで表示</li>
+            <li>最強通貨×最弱通貨のペアを自動算出して推奨表示</li>
+            <li>計算期間と対象時間足をパラメーターで指定可能</li>
+            <li>強弱の順位変動(クロスオーバー)時にアラート</li>
+            <li>バーの色をRainbow Projectのツールカラーに統一可能</li>
+          </ul>
+        </section>
+
+        <section class="docs-block">
+          <h2>使い方</h2>
+          <ol class="step-list">
+            <li>zipを解凍し<code>CurrencyStrength_Meter.mq4</code>を取り出す</li>
+            <li>MT4「データフォルダを開く」→ MQL4 → Indicators に配置</li>
+            <li>MT4を再起動しチャートにドラッグ</li>
+            <li>計算する時間足(デフォルトH1)と期間を設定</li>
+            <li>推奨ペアをチャートで確認し、他のツールと併用してエントリー検討</li>
+          </ol>
+        </section>
+
+        <section class="docs-block">
+          <h2>パラメーター</h2>
+          <table class="params-table">
+            <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
+            <tbody>
+              <tr><td>CSM_Timeframe</td><td class="t-type">enum</td><td class="t-default">PERIOD_H1</td><td>計算に使う時間足</td></tr>
+              <tr><td>CSM_Period</td><td class="t-type">int</td><td class="t-default">24</td><td>強弱計算に使う本数(デフォルト24本=1日分)</td></tr>
+              <tr><td>CSM_UpdateInterval</td><td class="t-type">int</td><td class="t-default">60</td><td>強弱の再計算間隔(秒)</td></tr>
+              <tr><td>CSM_ShowRecommendPair</td><td class="t-type">bool</td><td class="t-default">true</td><td>最強×最弱の推奨ペアを表示</td></tr>
+              <tr><td>CSM_AlertOnRankChange</td><td class="t-type">bool</td><td class="t-default">true</td><td>順位変動時にアラート</td></tr>
+              <tr><td>CSM_PanelCorner</td><td class="t-type">enum</td><td class="t-default">LEFT_UPPER</td><td>パネル表示位置</td></tr>
+              <tr><td>CSM_BarWidth</td><td class="t-type">int</td><td class="t-default">180</td><td>バーグラフの幅(px)</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="docs-block">
+          <h2>注意事項</h2>
+          <div class="note" role="note"><p>⚠️ 強弱計算は「全通貨の関連ペア(ドルストレート・クロス)」のデータを使うため、気配値表示で主要ペアを全て有効化しておく必要があります。データが不足するとバーが空白になります。</p></div>
+        </section>
+
+        <section class="docs-block">
+          <h2>このツールのFAQ</h2>
+          <div class="faq">
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">バーが全く表示されません</summary><div class="faq__a"><p>MT4「気配値表示」ウィンドウで、USD/EUR/JPY/GBP/AUD/NZD/CAD/CHFの全組み合わせ(28ペア)を「全て表示」にしてください。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">ブローカーの通貨ペア表記が違います</summary><div class="faq__a"><p>EURUSD.fx など接尾辞が付くブローカーもあります。パラメーター<code>CSM_SymbolSuffix</code>で指定可能です。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q">どの時間足がおすすめ?</summary><div class="faq__a"><p>デイトレードならH1×24本(1日分)、スイングならH4×30本(約5日分)が目安です。</p></div></details>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <h2>関連ツール</h2>
+          <div class="related-tools">
+            <a class="related-tools__item" data-tool="05" href="./tool-05-correlation.html"><span class="related-tools__dot"></span>相関通貨ペアモニター</a>
+            <a class="related-tools__item" data-tool="09" href="./tool-09-multitf.html"><span class="related-tools__dot"></span>複数時間足トレンド一覧</a>
+          </div>
+        </section>
+
+        <section class="docs-block">
+          <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/CurrencyStrength_Meter.zip" class="btn btn--tool btn--lg" download>📥 ダウンロード</a>
+            <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo"><img src="../assets/logo.svg" alt="" width="28" height="28"><span>Rainbow Project</span></a>
+        <ul class="footer__links">
+          <li><a href="../index.html#tools">ツール一覧</a></li>
+          <li><a href="../about.html">プロジェクトについて</a></li>
+          <li><a href="./index.html">仕様書</a></li>
+          <li><a href="../disclaimer.html">免責事項</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p class="footer__copy">© Rainbow Project. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer__bar" aria-hidden="true"></div>
+  </footer>
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

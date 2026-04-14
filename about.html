@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainbow Project について — レインボープロジェクト</title>
+  <meta name="description" content="小卒シングルマザーがFXで人生を切り拓いた経験から、初心者が遠回りしないための「お守りツール」を無料配布するプロジェクトです。">
+  <meta name="theme-color" content="#FDFCFB">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rainbow Project について">
+  <meta property="og:description" content="小卒シングルマザーがFXで人生を切り拓いた経験から生まれた、初心者のための無料ツール配布プロジェクト。">
+  <meta property="og:image" content="./assets/og-image.svg">
+  <meta property="og:url" content="https://masato-collab.github.io/rainbow-fxkit/about.html">
+  <meta property="og:site_name" content="Rainbow Project">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rainbow Project について">
+  <meta name="twitter:description" content="小卒シングルマザーがFXで人生を切り拓いた経験から生まれた、初心者のための無料ツール配布プロジェクト。">
+  <meta name="twitter:image" content="./assets/og-image.svg">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="apple-touch-icon" href="./assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    /* このページ限定の軽微な調整 */
+    .about-hero {
+      position: relative;
+      padding: calc(var(--nav-height) + var(--space-10)) 0 var(--space-10);
+      background: var(--rainbow-gradient-soft);
+      text-align: center;
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.6), transparent 60%);
+      pointer-events: none;
+    }
+    .about-hero__inner { position: relative; }
+    .about-hero__title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-3);
+    }
+    .about-hero__lead {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.9;
+    }
+
+    .about-article {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .about-article h2 {
+      font-size: clamp(1.375rem, 3vw, 1.75rem);
+      margin-top: var(--space-10);
+      margin-bottom: var(--space-4);
+      position: relative;
+      padding-left: var(--space-5);
+    }
+    .about-article h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.35em;
+      bottom: 0.35em;
+      width: 6px;
+      border-radius: var(--radius-full);
+      background: var(--rainbow-gradient);
+    }
+    .about-article p {
+      font-size: 1.0625rem;
+      line-height: 2;
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+    }
+    .about-article p.muted { color: var(--text-secondary); font-size: 1rem; }
+
+    .profile-card {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: var(--space-5);
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin-top: var(--space-4);
+      box-shadow: var(--shadow-sm);
+    }
+    .profile-card__avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: var(--rainbow-gradient-soft);
+      display: grid;
+      place-items: center;
+      font-size: 3rem;
+      border: 4px solid #fff;
+      box-shadow: var(--shadow-md);
+    }
+    .profile-card__name { font-size: 1.25rem; margin: 0 0 var(--space-2); }
+    .profile-card__role {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-full);
+      background: var(--rainbow-gradient);
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: var(--space-3);
+    }
+    .profile-card__bio { color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.85; margin: 0; }
+
+    .future-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: var(--space-3);
+      margin-top: var(--space-4);
+    }
+    .future-list li {
+      padding: var(--space-4) var(--space-5);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      display: flex;
+      gap: var(--space-4);
+      align-items: flex-start;
+    }
+    .future-list__icon {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-full);
+      background: var(--rainbow-gradient-soft);
+      display: grid; place-items: center;
+      font-size: 1.25rem;
+      flex: none;
+    }
+    .future-list__title { font-weight: 700; margin: 0 0 var(--space-1); }
+    .future-list__desc  { color: var(--text-secondary); font-size: 0.9375rem; margin: 0; line-height: 1.8; }
+
+    .about-back-cta {
+      text-align: center;
+      padding: var(--space-10) 0;
+    }
+
+    @media (max-width: 600px) {
+      .profile-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .profile-card__avatar { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">本文へスキップ</a>
+
+  <!-- ナビゲーション -->
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="./index.html" class="nav__logo" aria-label="Rainbow Project トップへ">
+        <img src="./assets/logo.svg" alt="" width="32" height="32">
+        <span>Rainbow Project</span>
+      </a>
+      <button class="nav__toggle" type="button"
+              aria-label="メニューを開閉" aria-controls="nav-menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+      </button>
+      <nav aria-label="メインナビゲーション">
+        <ul class="nav__menu" id="nav-menu">
+          <li><a href="./index.html#tools">ツール一覧</a></li>
+          <li><a href="./about.html">プロジェクトについて</a></li>
+          <li><a href="./docs/index.html">仕様書</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="./index.html#bulk" class="nav__cta">🎁 一括DL</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ヒーロー -->
+    <section class="about-hero" aria-labelledby="about-title">
+      <div class="container about-hero__inner">
+        <span class="hero__eyebrow reveal" style="margin-bottom:var(--space-4);">
+          <span class="gradient-text">🌈 About Rainbow Project</span>
+        </span>
+        <h1 id="about-title" class="about-hero__title reveal">Rainbow Project について</h1>
+        <p class="about-hero__lead reveal">
+          たくさんの遠回りをしてきた私が、同じ場所で立ち止まる誰かに届けたい、
+          10の小さな「お守り」の物語です。
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="about-article reveal">
+
+          <!-- 1. プロジェクトの想い -->
+          <h2>1. プロジェクトの想い</h2>
+          <p>
+            私は、小学校までしか学校に通えませんでした。
+            お金の勉強も、経済のニュースも、投資という概念すら、
+            大人になってから少しずつ独学で追いかけてきました。
+          </p>
+          <p>
+            シングルマザーとして幼い子どもを抱えながら、
+            夜中にチャートを開き、失敗を繰り返し、それでも諦めずに学び続ける。
+            そんな日々を数年続けて、ようやく「負けない自分」にたどり着きました。
+          </p>
+          <p>
+            その過程で痛感したのは、<strong>「最初のつまずきの多くは、ちょっとした情報や道具があれば防げた」</strong>ということです。
+            キリ番での反発を知らずに逆指値を置かなかったこと。
+            経済指標の時間を見落として大損したこと。
+            ロット計算を間違えて、たった一回の取引で何日分もの生活費を失ったこと。
+          </p>
+          <p>
+            「あの時、誰かがそっと耳打ちしてくれていたら」
+            そう思う瞬間が、何度もありました。
+          </p>
+          <p>
+            Rainbow Project は、そんな過去の自分に向けて作ったツール集です。
+            同じ場所で立ち止まっている、顔も名前も知らないあなたのために、
+            10の小さな「お守り」として贈ります。
+          </p>
+
+          <!-- 2. なぜ10のツールなのか -->
+          <h2>2. なぜ10のツールなのか</h2>
+          <p>
+            FX初心者がつまずくポイントは、実はそれほど多くありません。
+            「時間感覚のズレ」「リスク計算のミス」「指標発表の見落とし」
+            「キリ番での反発見逃し」「過大ロット」「相関の重複」……。
+          </p>
+          <p>
+            この10個の<strong>よくある落とし穴</strong>に、
+            一つずつ「守り神」を当てる形で、ツールを設計しました。
+            派手さはありません。でも、知っていれば避けられる失敗を、
+            そっと防ぐための10個です。
+          </p>
+          <p class="muted">
+            10は虹の色よりも多く、でも覚えきれる数。
+            「今日はこの一つだけ入れてみよう」から始められる、ちょうどいい数だと思っています。
+          </p>
+
+          <!-- 3. なぜ無料なのか -->
+          <h2>3. なぜ無料なのか</h2>
+          <p>
+            正直に言うと、売ることもできたかもしれません。
+            でも私は、<strong>お金を払う余裕がない段階の人ほど、こういうツールを必要としている</strong>ことを知っています。
+          </p>
+          <p>
+            情報商材に何万円も払って、さらに損を重ねる——
+            そういう悲しい循環を、少しでも減らしたい。
+            だからこのツール集は、メールアドレスの登録も不要で、
+            URLを知っているだけで誰でも受け取れる形にしました。
+          </p>
+          <p>
+            もし役に立ったなと思ったら、YouTubeのチャンネル登録と、
+            大切な誰かにこのページをシェアしてもらえたら、それが一番うれしいです。
+          </p>
+
+          <!-- 4. 代表プロフィール -->
+          <h2>4. 代表プロフィール</h2>
+          <div class="profile-card">
+            <div class="profile-card__avatar" aria-hidden="true">🌈</div>
+            <div>
+              <h3 class="profile-card__name">Rainbow(レインボー)</h3>
+              <span class="profile-card__role">FOUNDER</span>
+              <p class="profile-card__bio">
+                小卒シングルマザーから独学でFXを学び、生活を立て直した経験を基に
+                YouTubeでの情報発信と初心者支援ツールの配布を行う。
+                「一人でも多くの母親・シングル世帯が、
+                 お金に振り回されない生き方を取り戻せるように」を活動理念とする。
+                <br>※ 本プロフィールは後日、実名・実写真に差し替え予定のプレースホルダーです。
+              </p>
+            </div>
+          </div>
+
+          <!-- 5. 今後の展開 -->
+          <h2>5. 今後の展開</h2>
+          <p class="muted">
+            このプロジェクトは、一度作って終わりではありません。
+            使ってくださる方からの声を聞きながら、ゆっくり育てていく予定です。
+          </p>
+          <ul class="future-list">
+            <li>
+              <div class="future-list__icon" aria-hidden="true">🛠️</div>
+              <div>
+                <p class="future-list__title">既存10ツールのアップデート</p>
+                <p class="future-list__desc">不具合修正・機能追加を継続。ご要望の多い機能から順次実装します。</p>
+              </div>
+            </li>
+            <li>
+              <div class="future-list__icon" aria-hidden="true">📱</div>
+              <div>
+                <p class="future-list__title">MT5版の提供</p>
+                <p class="future-list__desc">MT5への移植リクエストが多いツールから順次対応予定です。</p>
+              </div>
+            </li>
+            <li>
+              <div class="future-list__icon" aria-hidden="true">📘</div>
+              <div>
+                <p class="future-list__title">使い方解説動画の拡充</p>
+                <p class="future-list__desc">YouTubeチャンネルで、各ツールの実戦での使いどころを紹介していきます。</p>
+              </div>
+            </li>
+            <li>
+              <div class="future-list__icon" aria-hidden="true">🌍</div>
+              <div>
+                <p class="future-list__title">コミュニティと翻訳</p>
+                <p class="future-list__desc">英語版UIや、コミュニティスペースの用意も検討中です。</p>
+              </div>
+            </li>
+          </ul>
+
+        </article>
+      </div>
+
+      <div class="about-back-cta reveal">
+        <a href="./index.html#tools" class="btn btn--primary btn--lg">🎁 ツール一覧を見る</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="./index.html" class="footer__logo" aria-label="Rainbow Project">
+          <img src="./assets/logo.svg" alt="" width="28" height="28">
+          <span>Rainbow Project</span>
+        </a>
+        <ul class="footer__links">
+          <li><a href="./index.html#tools">ツール一覧</a></li>
+          <li><a href="./about.html">プロジェクトについて</a></li>
+          <li><a href="./docs/index.html">仕様書</a></li>
+          <li><a href="./disclaimer.html">免責事項</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p class="footer__copy">© Rainbow Project. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer__bar" aria-hidden="true"></div>
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>
