@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- BudouX: 日本語の自然な改行位置を自動挿入 (<budoux-ja>で囲った要素に適用) -->
+  <script async src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
 </head>
 <body data-tool="06">
   <a href="#main" class="skip-link">本文へスキップ</a>
@@ -53,13 +56,13 @@
         <header class="docs-hero">
           <div class="docs-hero__icon" aria-hidden="true">🎯</div>
           <span class="docs-hero__eyebrow">#06 · UTILITY EA</span>
-          <h1 class="docs-hero__title">ビジュアル損切り・利確ライン</h1>
-          <p class="docs-hero__sub"><code>VisualSLTP_Tool</code> — SL/TPラインをドラッグで直感調整、損益が即可視化</p>
+          <h1 class="docs-hero__title"><budoux-ja>ビジュアル損切り・利確ライン</budoux-ja></h1>
+          <p class="docs-hero__sub"><code>VisualSLTP_Tool</code> — <budoux-ja>SL/TPラインをドラッグで直感調整、損益が即可視化</budoux-ja></p>
         </header>
 
         <section class="docs-block">
-          <h2>概要</h2>
-          <p>エントリー・SL・TPラインをチャート上にドラッグ&ドロップで配置できるビジュアルツールです。線を動かすごとに、pips数・損益額(円換算)・リスクリワード比率がリアルタイム更新されるため、「今このラインだと損失いくらか」を数字で把握しながらプラニングできます。</p>
+          <h2><budoux-ja>概要</budoux-ja></h2>
+          <p><budoux-ja>エントリー・SL・TPラインをチャート上にドラッグ&ドロップで配置できるビジュアルツールです。線を動かすごとに、pips数・損益額(円換算)・リスクリワード比率がリアルタイム更新されるため、「今このラインだと損失いくらか」を数字で把握しながらプラニングできます。</budoux-ja></p>
           <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
             <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/VisualSLTP_Tool.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
             <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
@@ -67,30 +70,30 @@
         </section>
 
         <section class="docs-block">
-          <h2>主な機能</h2>
+          <h2><budoux-ja>主な機能</budoux-ja></h2>
           <ul class="feature-list">
-            <li>エントリー / SL / TPの3本のラインをチャート上にドラッグ配置</li>
-            <li>ライン移動ごとにpips数・損益額・RR比をリアルタイム表示</li>
-            <li>想定ロットを入力すると損益額が円・USDで試算される</li>
-            <li>エントリー方向(買い/売り)の切替ボタン</li>
-            <li>現在のSL/TP設定を既存ポジションに一括反映するボタン</li>
-            <li>塗りつぶしで利益エリア(緑)/損失エリア(赤)を視覚化</li>
+            <li><budoux-ja>エントリー / SL / TPの3本のラインをチャート上にドラッグ配置</budoux-ja></li>
+            <li><budoux-ja>ライン移動ごとにpips数・損益額・RR比をリアルタイム表示</budoux-ja></li>
+            <li><budoux-ja>想定ロットを入力すると損益額が円・USDで試算される</budoux-ja></li>
+            <li><budoux-ja>エントリー方向(買い/売り)の切替ボタン</budoux-ja></li>
+            <li><budoux-ja>現在のSL/TP設定を既存ポジションに一括反映するボタン</budoux-ja></li>
+            <li><budoux-ja>塗りつぶしで利益エリア(緑)/損失エリア(赤)を視覚化</budoux-ja></li>
           </ul>
         </section>
 
         <section class="docs-block">
-          <h2>使い方</h2>
+          <h2><budoux-ja>使い方</budoux-ja></h2>
           <ol class="step-list">
-            <li>zipを解凍し<code>VisualSLTP_Tool.ex4</code>を取り出す</li>
-            <li>MT4「データフォルダを開く」→ MQL4 → Experts に配置</li>
-            <li>自動売買を有効化してチャートにドラッグ</li>
-            <li>3本のラインをドラッグしてSL/TPを決定</li>
-            <li>「既存ポジションに適用」ボタンで実際のSL/TPに反映</li>
+            <li><budoux-ja>zipを解凍し</budoux-ja><code>VisualSLTP_Tool.ex4</code><budoux-ja>を取り出す</budoux-ja></li>
+            <li><budoux-ja>MT4「データフォルダを開く」→ MQL4 → Experts に配置</budoux-ja></li>
+            <li><budoux-ja>自動売買を有効化してチャートにドラッグ</budoux-ja></li>
+            <li><budoux-ja>3本のラインをドラッグしてSL/TPを決定</budoux-ja></li>
+            <li><budoux-ja>「既存ポジションに適用」ボタンで実際のSL/TPに反映</budoux-ja></li>
           </ol>
         </section>
 
         <section class="docs-block">
-          <h2>パラメーター</h2>
+          <h2><budoux-ja>パラメーター</budoux-ja></h2>
           <table class="params-table">
             <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
             <tbody>
@@ -106,21 +109,21 @@
         </section>
 
         <section class="docs-block">
-          <h2>注意事項</h2>
-          <div class="note" role="note"><p>⚠️ 「既存ポジションに適用」ボタンは実際のSL/TP変更処理を行います。意図しないポジションに反映されないよう、通貨ペア・マジックナンバーを事前に確認してください。</p></div>
+          <h2><budoux-ja>注意事項</budoux-ja></h2>
+          <div class="note" role="note"><p>⚠️ <budoux-ja>「既存ポジションに適用」ボタンは実際のSL/TP変更処理を行います。意図しないポジションに反映されないよう、通貨ペア・マジックナンバーを事前に確認してください。</budoux-ja></p></div>
         </section>
 
         <section class="docs-block">
-          <h2>このツールのFAQ</h2>
+          <h2><budoux-ja>このツールのFAQ</budoux-ja></h2>
           <div class="faq">
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">ラインが表示されません</summary><div class="faq__a"><p>自動売買が有効になっているかご確認ください。また、パラメーター<code>VST_Direction</code>に応じて3本のラインがチャート中央付近に生成されます。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">RR比が計算されません</summary><div class="faq__a"><p>SLとエントリー間の距離が0の場合は計算できません。SLをエントリーから少し離してください。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">複数ポジションに一括適用したい</summary><div class="faq__a"><p>マジックナンバーフィルタを指定すれば、該当するポジションだけに一括反映可能です。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>ラインが表示されません</budoux-ja></summary><div class="faq__a"><p><budoux-ja>自動売買が有効になっているかご確認ください。また、パラメーター</budoux-ja><code>VST_Direction</code><budoux-ja>に応じて3本のラインがチャート中央付近に生成されます。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>RR比が計算されません</budoux-ja></summary><div class="faq__a"><p><budoux-ja>SLとエントリー間の距離が0の場合は計算できません。SLをエントリーから少し離してください。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>複数ポジションに一括適用したい</budoux-ja></summary><div class="faq__a"><p><budoux-ja>マジックナンバーフィルタを指定すれば、該当するポジションだけに一括反映可能です。</budoux-ja></p></div></details>
           </div>
         </section>
 
         <section class="docs-block">
-          <h2>関連ツール</h2>
+          <h2><budoux-ja>関連ツール</budoux-ja></h2>
           <div class="related-tools">
             <a class="related-tools__item" data-tool="04" href="./tool-04-lot.html"><span class="related-tools__dot"></span>ロット計算機</a>
             <a class="related-tools__item" data-tool="07" href="./tool-07-oneclick.html"><span class="related-tools__dot"></span>ワンクリック全決済</a>

@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- BudouX: 日本語の自然な改行位置を自動挿入 (<budoux-ja>で囲った要素に適用) -->
+  <script async src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
 </head>
 <body data-tool="08">
   <a href="#main" class="skip-link">本文へスキップ</a>
@@ -53,13 +56,13 @@
         <header class="docs-hero">
           <div class="docs-hero__icon" aria-hidden="true">⚠️</div>
           <span class="docs-hero__eyebrow">#08 · EA</span>
-          <h1 class="docs-hero__title">自動ポジションサイズ警告</h1>
-          <p class="docs-hero__sub"><code>PositionSize_Warning</code> — 一撃退場を防ぐための、3段階の守り神</p>
+          <h1 class="docs-hero__title"><budoux-ja>自動ポジションサイズ警告</budoux-ja></h1>
+          <p class="docs-hero__sub"><code>PositionSize_Warning</code> — <budoux-ja>一撃退場を防ぐための、3段階の守り神</budoux-ja></p>
         </header>
 
         <section class="docs-block">
-          <h2>概要</h2>
-          <p>初心者の「一撃退場」の多くは、残高に対して過大なロット発注・SL未設定・高レバレッジの組み合わせで発生します。本EAは新規ポジション検知時にリスク額・レバレッジを自動計算し、基準を超える場合に3段階(注意/警告/危険)でチャート上とポップアップに警告を表示します。CSVログも残します。</p>
+          <h2><budoux-ja>概要</budoux-ja></h2>
+          <p><budoux-ja>初心者の「一撃退場」の多くは、残高に対して過大なロット発注・SL未設定・高レバレッジの組み合わせで発生します。本EAは新規ポジション検知時にリスク額・レバレッジを自動計算し、基準を超える場合に3段階(注意/警告/危険)でチャート上とポップアップに警告を表示します。CSVログも残します。</budoux-ja></p>
           <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
             <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/PositionSize_Warning.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
             <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
@@ -67,31 +70,31 @@
         </section>
 
         <section class="docs-block">
-          <h2>主な機能</h2>
+          <h2><budoux-ja>主な機能</budoux-ja></h2>
           <ul class="feature-list">
-            <li>新規ポジション発注を自動検知</li>
-            <li>残高に対するリスク額(SL距離 × ロット)を計算</li>
-            <li>3段階(2%/5%/10%)のしきい値で警告を色分け(黄/橙/赤)</li>
-            <li>SL未設定ポジション検知時にも警告</li>
-            <li>口座全体の有効レバレッジが上限超過時に警告</li>
-            <li>全ての警告をCSVログファイルに自動記録</li>
-            <li>警告はチャート上テキスト+ポップアップの二重表示</li>
+            <li><budoux-ja>新規ポジション発注を自動検知</budoux-ja></li>
+            <li><budoux-ja>残高に対するリスク額(SL距離 × ロット)を計算</budoux-ja></li>
+            <li><budoux-ja>3段階(2%/5%/10%)のしきい値で警告を色分け(黄/橙/赤)</budoux-ja></li>
+            <li><budoux-ja>SL未設定ポジション検知時にも警告</budoux-ja></li>
+            <li><budoux-ja>口座全体の有効レバレッジが上限超過時に警告</budoux-ja></li>
+            <li><budoux-ja>全ての警告をCSVログファイルに自動記録</budoux-ja></li>
+            <li><budoux-ja>警告はチャート上テキスト+ポップアップの二重表示</budoux-ja></li>
           </ul>
         </section>
 
         <section class="docs-block">
-          <h2>使い方</h2>
+          <h2><budoux-ja>使い方</budoux-ja></h2>
           <ol class="step-list">
-            <li>zipを解凍し<code>PositionSize_Warning.ex4</code>を取り出す</li>
-            <li>MT4「データフォルダを開く」→ MQL4 → Experts に配置</li>
-            <li>自動売買を有効化して、監視したいチャート(任意のペアでOK)にドラッグ</li>
-            <li>しきい値(2%/5%/10%)とレバレッジ上限を確認</li>
-            <li>以後、新規発注するたびに自動で警告判定が行われる</li>
+            <li><budoux-ja>zipを解凍し</budoux-ja><code>PositionSize_Warning.ex4</code><budoux-ja>を取り出す</budoux-ja></li>
+            <li><budoux-ja>MT4「データフォルダを開く」→ MQL4 → Experts に配置</budoux-ja></li>
+            <li><budoux-ja>自動売買を有効化して、監視したいチャート(任意のペアでOK)にドラッグ</budoux-ja></li>
+            <li><budoux-ja>しきい値(2%/5%/10%)とレバレッジ上限を確認</budoux-ja></li>
+            <li><budoux-ja>以後、新規発注するたびに自動で警告判定が行われる</budoux-ja></li>
           </ol>
         </section>
 
         <section class="docs-block">
-          <h2>パラメーター</h2>
+          <h2><budoux-ja>パラメーター</budoux-ja></h2>
           <table class="params-table">
             <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
             <tbody>
@@ -107,21 +110,21 @@
         </section>
 
         <section class="docs-block">
-          <h2>注意事項</h2>
-          <div class="note" role="note"><p>⚠️ SL未設定を「想定損失無限大」と見なすため必ず警告が出ます。SL未設定でもトレードしたい場合は警告を無視しても実害はありません(ただし資金管理上は推奨できません)。</p></div>
+          <h2><budoux-ja>注意事項</budoux-ja></h2>
+          <div class="note" role="note"><p>⚠️ <budoux-ja>SL未設定を「想定損失無限大」と見なすため必ず警告が出ます。SL未設定でもトレードしたい場合は警告を無視しても実害はありません(ただし資金管理上は推奨できません)。</budoux-ja></p></div>
         </section>
 
         <section class="docs-block">
-          <h2>このツールのFAQ</h2>
+          <h2><budoux-ja>このツールのFAQ</budoux-ja></h2>
           <div class="faq">
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">複数チャートで同時に使っても大丈夫?</summary><div class="faq__a"><p>1つのチャートにだけ適用してください。複数にアタッチすると警告が重複します。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">CSVログはどこに出力されますか?</summary><div class="faq__a"><p>MT4データフォルダの <code>MQL4/Files/</code> 以下に出力されます。「ファイル→データフォルダを開く」から辿れます。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">他EAからの発注も警告対象?</summary><div class="faq__a"><p>はい、マジックナンバーに関係なく全てのポジションを監視します。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>複数チャートで同時に使っても大丈夫?</budoux-ja></summary><div class="faq__a"><p><budoux-ja>1つのチャートにだけ適用してください。複数にアタッチすると警告が重複します。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>CSVログはどこに出力されますか?</budoux-ja></summary><div class="faq__a"><p><budoux-ja>MT4データフォルダの</budoux-ja> <code>MQL4/Files/</code> <budoux-ja>以下に出力されます。「ファイル→データフォルダを開く」から辿れます。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>他EAからの発注も警告対象?</budoux-ja></summary><div class="faq__a"><p><budoux-ja>はい、マジックナンバーに関係なく全てのポジションを監視します。</budoux-ja></p></div></details>
           </div>
         </section>
 
         <section class="docs-block">
-          <h2>関連ツール</h2>
+          <h2><budoux-ja>関連ツール</budoux-ja></h2>
           <div class="related-tools">
             <a class="related-tools__item" data-tool="04" href="./tool-04-lot.html"><span class="related-tools__dot"></span>ロット計算機</a>
             <a class="related-tools__item" data-tool="07" href="./tool-07-oneclick.html"><span class="related-tools__dot"></span>ワンクリック全決済</a>

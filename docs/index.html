@@ -29,6 +29,9 @@
 
   <link rel="stylesheet" href="../css/style.css">
 
+  <!-- BudouX: 日本語の自然な改行位置を自動挿入 (<budoux-ja>で囲った要素に適用) -->
+  <script async src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
+
   <style>
     .docs-index-hero {
       padding: calc(var(--nav-height) + var(--space-10)) 0 var(--space-8);
@@ -91,8 +94,8 @@
         <span class="hero__eyebrow reveal" style="margin-bottom:var(--space-4);">
           <span class="gradient-text">📚 Documentation</span>
         </span>
-        <h1 id="docs-index-title" class="docs-index-hero__title reveal">仕様書一覧</h1>
-        <p class="docs-index-hero__lead reveal">10のツールそれぞれの機能・パラメーター・使い方を詳しく解説しています。</p>
+        <h1 id="docs-index-title" class="docs-index-hero__title reveal"><budoux-ja>仕様書一覧</budoux-ja></h1>
+        <p class="docs-index-hero__lead reveal"><budoux-ja>10のツールそれぞれの機能・パラメーター・使い方を詳しく解説しています。</budoux-ja></p>
         <div class="divider-rainbow" aria-hidden="true" style="margin-top:var(--space-5);"></div>
       </div>
     </section>
@@ -108,72 +111,72 @@
 
           <a class="docs-index-card reveal" data-tool="01" href="./tool-01-jptime.html">
             <span class="docs-index-card__num">#01 · 🕐 インジケーター</span>
-            <h2 class="docs-index-card__title">日本時間表示インジケーター</h2>
+            <h2 class="docs-index-card__title"><budoux-ja>日本時間表示インジケーター</budoux-ja></h2>
             <code class="docs-index-card__code">JPTime_MarketClock</code>
-            <p class="docs-index-card__desc">MT4サーバー時間を日本時間に自動変換。東京・ロンドン・NYの市場営業時間も表示。</p>
+            <p class="docs-index-card__desc"><budoux-ja>MT4サーバー時間を日本時間に自動変換。東京・ロンドン・NYの市場営業時間も表示。</budoux-ja></p>
           </a>
 
           <a class="docs-index-card reveal" data-tool="02" href="./tool-02-roundnumber.html">
             <span class="docs-index-card__num">#02 · 🔔 インジケーター</span>
-            <h2 class="docs-index-card__title">キリ番アラート</h2>
+            <h2 class="docs-index-card__title"><budoux-ja>キリ番アラート</budoux-ja></h2>
             <code class="docs-index-card__code">RoundNumber_Alert</code>
-            <p class="docs-index-card__desc">キリ番への接近・到達を音とポップアップで通知。水平ライン自動描画。</p>
+            <p class="docs-index-card__desc"><budoux-ja>キリ番への接近・到達を音とポップアップで通知。水平ライン自動描画。</budoux-ja></p>
           </a>
 
           <a class="docs-index-card reveal" data-tool="03" href="./tool-03-economic.html">
             <span class="docs-index-card__num">#03 · 📅 インジケーター</span>
-            <h2 class="docs-index-card__title">経済指標カウントダウン</h2>
+            <h2 class="docs-index-card__title"><budoux-ja>経済指標カウントダウン</budoux-ja></h2>
             <code class="docs-index-card__code">EconomicCalendar_Countdown</code>
-            <p class="docs-index-card__desc">重要経済指標までの残り時間を常時表示。重要度別に色分け。</p>
+            <p class="docs-index-card__desc"><budoux-ja>重要経済指標までの残り時間を常時表示。重要度別に色分け。</budoux-ja></p>
           </a>
 
           <a class="docs-index-card reveal" data-tool="04" href="./tool-04-lot.html">
             <span class="docs-index-card__num">#04 · 🧮 ユーティリティEA</span>
-            <h2 class="docs-index-card__title">ロット計算機</h2>
+            <h2 class="docs-index-card__title"><budoux-ja>ロット計算機</budoux-ja></h2>
             <code class="docs-index-card__code">LotCalculator_Panel</code>
-            <p class="docs-index-card__desc">最適ロットサイズを自動計算するパネル。損失想定額・RR別利益額を表示。</p>
+            <p class="docs-index-card__desc"><budoux-ja>最適ロットサイズを自動計算するパネル。損失想定額・RR別利益額を表示。</budoux-ja></p>
           </a>
 
           <a class="docs-index-card reveal" data-tool="05" href="./tool-05-correlation.html">
             <span class="docs-index-card__num">#05 · 📊 インジケーター</span>
-            <h2 class="docs-index-card__title">相関通貨ペアモニター</h2>
+            <h2 class="docs-index-card__title"><budoux-ja>相関通貨ペアモニター</budoux-ja></h2>
             <code class="docs-index-card__code">CorrelationMatrix_Monitor</code>
-            <p class="docs-index-card__desc">主要通貨ペアの相関係数をマトリクス表示。ダイバージェンスアラート。</p>
+            <p class="docs-index-card__desc"><budoux-ja>主要通貨ペアの相関係数をマトリクス表示。ダイバージェンスアラート。</budoux-ja></p>
           </a>
 
           <a class="docs-index-card reveal" data-tool="06" href="./tool-06-sltp.html">
             <span class="docs-index-card__num">#06 · 🎯 ユーティリティEA</span>
-            <h2 class="docs-index-card__title">ビジュアル損切り・利確ライン</h2>
+            <h2 class="docs-index-card__title"><budoux-ja>ビジュアル損切り・利確ライン</budoux-ja></h2>
             <code class="docs-index-card__code">VisualSLTP_Tool</code>
-            <p class="docs-index-card__desc">SL/TPをドラッグで設定、損益を即座に可視化。RR比もリアルタイム表示。</p>
+            <p class="docs-index-card__desc"><budoux-ja>SL/TPをドラッグで設定、損益を即座に可視化。RR比もリアルタイム表示。</budoux-ja></p>
           </a>
 
           <a class="docs-index-card reveal" data-tool="07" href="./tool-07-oneclick.html">
             <span class="docs-index-card__num">#07 · ⚡ ユーティリティEA</span>
-            <h2 class="docs-index-card__title">ワンクリック全決済</h2>
+            <h2 class="docs-index-card__title"><budoux-ja>ワンクリック全決済</budoux-ja></h2>
             <code class="docs-index-card__code">OneClick_CloseAll</code>
-            <p class="docs-index-card__desc">複数の決済オプションをボタン一発で実行。緊急時の冷静な操作を支援。</p>
+            <p class="docs-index-card__desc"><budoux-ja>複数の決済オプションをボタン一発で実行。緊急時の冷静な操作を支援。</budoux-ja></p>
           </a>
 
           <a class="docs-index-card reveal" data-tool="08" href="./tool-08-warning.html">
             <span class="docs-index-card__num">#08 · ⚠️ EA</span>
-            <h2 class="docs-index-card__title">自動ポジションサイズ警告</h2>
+            <h2 class="docs-index-card__title"><budoux-ja>自動ポジションサイズ警告</budoux-ja></h2>
             <code class="docs-index-card__code">PositionSize_Warning</code>
-            <p class="docs-index-card__desc">過大ロット発注時に自動で警告。SL未設定・高レバレッジも検知。</p>
+            <p class="docs-index-card__desc"><budoux-ja>過大ロット発注時に自動で警告。SL未設定・高レバレッジも検知。</budoux-ja></p>
           </a>
 
           <a class="docs-index-card reveal" data-tool="09" href="./tool-09-multitf.html">
             <span class="docs-index-card__num">#09 · 📈 インジケーター</span>
-            <h2 class="docs-index-card__title">複数時間足トレンド一覧</h2>
+            <h2 class="docs-index-card__title"><budoux-ja>複数時間足トレンド一覧</budoux-ja></h2>
             <code class="docs-index-card__code">MultiTF_TrendPanel</code>
-            <p class="docs-index-card__desc">M5〜W1のトレンド方向を信号機形式で表示。一致度アラート付き。</p>
+            <p class="docs-index-card__desc"><budoux-ja>M5〜W1のトレンド方向を信号機形式で表示。一致度アラート付き。</budoux-ja></p>
           </a>
 
           <a class="docs-index-card reveal" data-tool="10" href="./tool-10-strength.html">
             <span class="docs-index-card__num">#10 · 💪 インジケーター</span>
-            <h2 class="docs-index-card__title">通貨強弱メーター</h2>
+            <h2 class="docs-index-card__title"><budoux-ja>通貨強弱メーター</budoux-ja></h2>
             <code class="docs-index-card__code">CurrencyStrength_Meter</code>
-            <p class="docs-index-card__desc">主要8通貨の強弱をバーグラフで可視化。最強×最弱の推奨ペアも提示。</p>
+            <p class="docs-index-card__desc"><budoux-ja>主要8通貨の強弱をバーグラフで可視化。最強×最弱の推奨ペアも提示。</budoux-ja></p>
           </a>
 
         </div>
@@ -183,8 +186,8 @@
     <!-- 一括DL -->
     <section class="section" id="bulk">
       <div class="bulk reveal">
-        <h2 class="bulk__title">まとめて、ぜんぶ手に入れる</h2>
-        <p class="bulk__subtitle">10ツール + 仕様書PDF + インストールガイド</p>
+        <h2 class="bulk__title"><budoux-ja>まとめて、ぜんぶ手に入れる</budoux-ja></h2>
+        <p class="bulk__subtitle"><budoux-ja>10ツール + 仕様書PDF + インストールガイド</budoux-ja></p>
         <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/FXKit_All.zip"
            class="btn btn--rainbow-text btn--lg" download>
           🎁 <span class="gradient-text">10ツール 一括ダウンロード</span>

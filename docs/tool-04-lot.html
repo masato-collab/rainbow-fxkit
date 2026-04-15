@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- BudouX: 日本語の自然な改行位置を自動挿入 (<budoux-ja>で囲った要素に適用) -->
+  <script async src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
 </head>
 <body data-tool="04">
   <a href="#main" class="skip-link">本文へスキップ</a>
@@ -53,13 +56,13 @@
         <header class="docs-hero">
           <div class="docs-hero__icon" aria-hidden="true">🧮</div>
           <span class="docs-hero__eyebrow">#04 · UTILITY EA</span>
-          <h1 class="docs-hero__title">ロット計算機</h1>
-          <p class="docs-hero__sub"><code>LotCalculator_Panel</code> — 許容リスクから最適ロットを自動算出するチャート上パネル</p>
+          <h1 class="docs-hero__title"><budoux-ja>ロット計算機</budoux-ja></h1>
+          <p class="docs-hero__sub"><code>LotCalculator_Panel</code> — <budoux-ja>許容リスクから最適ロットを自動算出するチャート上パネル</budoux-ja></p>
         </header>
 
         <section class="docs-block">
-          <h2>概要</h2>
-          <p>「今回の取引でロットはいくつが適切か」という根本的な問いに、チャート上のパネルで即答してくれるツールです。口座残高・リスク許容率(%)・SL幅(pips)を入力すると、最適ロットサイズ・想定損失額・RR別の想定利益額をリアルタイム計算します。</p>
+          <h2><budoux-ja>概要</budoux-ja></h2>
+          <p><budoux-ja>「今回の取引でロットはいくつが適切か」という根本的な問いに、チャート上のパネルで即答してくれるツールです。口座残高・リスク許容率(%)・SL幅(pips)を入力すると、最適ロットサイズ・想定損失額・RR別の想定利益額をリアルタイム計算します。</budoux-ja></p>
           <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
             <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/LotCalculator_Panel.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
             <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
@@ -67,30 +70,30 @@
         </section>
 
         <section class="docs-block">
-          <h2>主な機能</h2>
+          <h2><budoux-ja>主な機能</budoux-ja></h2>
           <ul class="feature-list">
-            <li>チャート上パネルに残高・リスク%・SL幅を入力</li>
-            <li>最適ロットサイズを自動計算(通貨ペアごとのpip価値を考慮)</li>
-            <li>想定損失額を円・USD両方で表示</li>
-            <li>RR 1:1, 1:2, 1:3 別の想定利益額を同時表示</li>
-            <li>ブローカー許可範囲(最小/最大ロット・ステップ)に自動クリップ</li>
-            <li>結果をクリップボードにコピーするボタン付き</li>
+            <li><budoux-ja>チャート上パネルに残高・リスク%・SL幅を入力</budoux-ja></li>
+            <li><budoux-ja>最適ロットサイズを自動計算(通貨ペアごとのpip価値を考慮)</budoux-ja></li>
+            <li><budoux-ja>想定損失額を円・USD両方で表示</budoux-ja></li>
+            <li><budoux-ja>RR 1:1, 1:2, 1:3 別の想定利益額を同時表示</budoux-ja></li>
+            <li><budoux-ja>ブローカー許可範囲(最小/最大ロット・ステップ)に自動クリップ</budoux-ja></li>
+            <li><budoux-ja>結果をクリップボードにコピーするボタン付き</budoux-ja></li>
           </ul>
         </section>
 
         <section class="docs-block">
-          <h2>使い方</h2>
+          <h2><budoux-ja>使い方</budoux-ja></h2>
           <ol class="step-list">
-            <li>zipを解凍し<code>LotCalculator_Panel.ex4</code>を取り出す</li>
-            <li>MT4「データフォルダを開く」→ MQL4 → Experts に配置</li>
-            <li>MT4「ツール→オプション→エキスパートアドバイザ」で自動売買を有効化</li>
-            <li>チャートに<code>LotCalculator_Panel</code>をドラッグ&ドロップ</li>
-            <li>パネルでリスク%・SL幅を入力すると即座にロットが算出される</li>
+            <li><budoux-ja>zipを解凍し</budoux-ja><code>LotCalculator_Panel.ex4</code><budoux-ja>を取り出す</budoux-ja></li>
+            <li><budoux-ja>MT4「データフォルダを開く」→ MQL4 → Experts に配置</budoux-ja></li>
+            <li><budoux-ja>MT4「ツール→オプション→エキスパートアドバイザ」で自動売買を有効化</budoux-ja></li>
+            <li><budoux-ja>チャートに</budoux-ja><code>LotCalculator_Panel</code><budoux-ja>をドラッグ&ドロップ</budoux-ja></li>
+            <li><budoux-ja>パネルでリスク%・SL幅を入力すると即座にロットが算出される</budoux-ja></li>
           </ol>
         </section>
 
         <section class="docs-block">
-          <h2>パラメーター</h2>
+          <h2><budoux-ja>パラメーター</budoux-ja></h2>
           <table class="params-table">
             <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
             <tbody>
@@ -106,21 +109,21 @@
         </section>
 
         <section class="docs-block">
-          <h2>注意事項</h2>
-          <div class="note" role="note"><p>⚠️ 本ツールは発注機能を持ちません。計算結果をもとに実際の発注は手動で行ってください。スプレッド・スリッページは計算に含まれないため、余裕を持った設定を推奨します。</p></div>
+          <h2><budoux-ja>注意事項</budoux-ja></h2>
+          <div class="note" role="note"><p>⚠️ <budoux-ja>本ツールは発注機能を持ちません。計算結果をもとに実際の発注は手動で行ってください。スプレッド・スリッページは計算に含まれないため、余裕を持った設定を推奨します。</budoux-ja></p></div>
         </section>
 
         <section class="docs-block">
-          <h2>このツールのFAQ</h2>
+          <h2><budoux-ja>このツールのFAQ</budoux-ja></h2>
           <div class="faq">
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">ドル円以外のクロス円でも正確ですか?</summary><div class="faq__a"><p>現在保有通貨と口座通貨のレートを考慮して計算しています。JPYペア・その他ペア両対応です。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">ロットが最小ロット未満になります</summary><div class="faq__a"><p>リスクが小さすぎるかSL幅が広すぎます。<code>LCP_RoundingMode</code>をROUND_UPにすると最小ロットに繰り上げます。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">パネルが表示されません</summary><div class="faq__a"><p>MT4の「自動売買」ボタンが有効になっているかご確認ください。右上のニコちゃんマーク(スマイル)が青色になっている必要があります。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>ドル円以外のクロス円でも正確ですか?</budoux-ja></summary><div class="faq__a"><p><budoux-ja>現在保有通貨と口座通貨のレートを考慮して計算しています。JPYペア・その他ペア両対応です。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>ロットが最小ロット未満になります</budoux-ja></summary><div class="faq__a"><p><budoux-ja>リスクが小さすぎるかSL幅が広すぎます。</budoux-ja><code>LCP_RoundingMode</code><budoux-ja>をROUND_UPにすると最小ロットに繰り上げます。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>パネルが表示されません</budoux-ja></summary><div class="faq__a"><p><budoux-ja>MT4の「自動売買」ボタンが有効になっているかご確認ください。右上のニコちゃんマーク(スマイル)が青色になっている必要があります。</budoux-ja></p></div></details>
           </div>
         </section>
 
         <section class="docs-block">
-          <h2>関連ツール</h2>
+          <h2><budoux-ja>関連ツール</budoux-ja></h2>
           <div class="related-tools">
             <a class="related-tools__item" data-tool="06" href="./tool-06-sltp.html"><span class="related-tools__dot"></span>ビジュアル損切り・利確ライン</a>
             <a class="related-tools__item" data-tool="08" href="./tool-08-warning.html"><span class="related-tools__dot"></span>自動ポジションサイズ警告</a>

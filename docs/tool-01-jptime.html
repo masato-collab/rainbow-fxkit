@@ -12,6 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- BudouX: 日本語の自然な改行位置を自動挿入 (<budoux-ja>で囲った要素に適用) -->
+  <script async src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
 </head>
 <body data-tool="01">
 
@@ -62,13 +65,13 @@
         <header class="docs-hero">
           <div class="docs-hero__icon" aria-hidden="true">🕐</div>
           <span class="docs-hero__eyebrow">#01 · INDICATOR</span>
-          <h1 class="docs-hero__title">日本時間表示インジケーター</h1>
-          <p class="docs-hero__sub"><code>JPTime_MarketClock</code> — サーバー時間と日本時間を併記し、三大市場の営業時間も一目で把握</p>
+          <h1 class="docs-hero__title"><budoux-ja>日本時間表示インジケーター</budoux-ja></h1>
+          <p class="docs-hero__sub"><code>JPTime_MarketClock</code> — <budoux-ja>サーバー時間と日本時間を併記し、三大市場の営業時間も一目で把握</budoux-ja></p>
         </header>
 
         <section class="docs-block">
-          <h2>概要</h2>
-          <p>MT4サーバーの時刻(多くはGMT+2/+3)と日本時間(JST)の差分は、初心者にとって大きな混乱のもとです。本インジケーターはチャート上にサーバー時間・JSTを併記し、さらに東京・ロンドン・ニューヨーク市場のオープン/クローズまでのカウントダウンを表示します。夏時間(DST)は自動判定。</p>
+          <h2><budoux-ja>概要</budoux-ja></h2>
+          <p><budoux-ja>MT4サーバーの時刻(多くはGMT+2/+3)と日本時間(JST)の差分は、初心者にとって大きな混乱のもとです。本インジケーターはチャート上にサーバー時間・JSTを併記し、さらに東京・ロンドン・ニューヨーク市場のオープン/クローズまでのカウントダウンを表示します。夏時間(DST)は自動判定。</budoux-ja></p>
           <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
             <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/JPTime_MarketClock.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
             <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
@@ -76,30 +79,30 @@
         </section>
 
         <section class="docs-block">
-          <h2>主な機能</h2>
+          <h2><budoux-ja>主な機能</budoux-ja></h2>
           <ul class="feature-list">
-            <li>サーバー時間と日本時間(JST)を同時表示</li>
-            <li>東京・ロンドン・NY の3大市場の営業状態(開場中/閉場中)表示</li>
-            <li>次回オープン/クローズまでのカウントダウン(時:分:秒)</li>
-            <li>夏時間(DST)を自動判定。米・英の切替日を内蔵</li>
-            <li>表示位置・フォントサイズ・文字色をパラメーターで調整可能</li>
-            <li>週末(土日)は「市場クローズ」を明示し、次のオープンまでを案内</li>
+            <li><budoux-ja>サーバー時間と日本時間(JST)を同時表示</budoux-ja></li>
+            <li><budoux-ja>東京・ロンドン・NY の3大市場の営業状態(開場中/閉場中)表示</budoux-ja></li>
+            <li><budoux-ja>次回オープン/クローズまでのカウントダウン(時:分:秒)</budoux-ja></li>
+            <li><budoux-ja>夏時間(DST)を自動判定。米・英の切替日を内蔵</budoux-ja></li>
+            <li><budoux-ja>表示位置・フォントサイズ・文字色をパラメーターで調整可能</budoux-ja></li>
+            <li><budoux-ja>週末(土日)は「市場クローズ」を明示し、次のオープンまでを案内</budoux-ja></li>
           </ul>
         </section>
 
         <section class="docs-block">
-          <h2>使い方</h2>
+          <h2><budoux-ja>使い方</budoux-ja></h2>
           <ol class="step-list">
-            <li>ダウンロードしたzipファイルを解凍する</li>
-            <li>MT4の「ファイル→データフォルダを開く→MQL4→Indicators」に<code>JPTime_MarketClock.ex4</code>を配置</li>
+            <li><budoux-ja>ダウンロードしたzipファイルを解凍する</budoux-ja></li>
+            <li><budoux-ja>MT4の「ファイル→データフォルダを開く→MQL4→Indicators」に</budoux-ja><code>JPTime_MarketClock.ex4</code><budoux-ja>を配置</budoux-ja></li>
             <li>MT4を再起動する</li>
-            <li>ナビゲーターから<code>JPTime_MarketClock</code>を適用したいチャートへドラッグ</li>
-            <li>パラメーターを必要に応じて調整して「OK」</li>
+            <li><budoux-ja>ナビゲーターから</budoux-ja><code>JPTime_MarketClock</code><budoux-ja>を適用したいチャートへドラッグ</budoux-ja></li>
+            <li><budoux-ja>パラメーターを必要に応じて調整して「OK」</budoux-ja></li>
           </ol>
         </section>
 
         <section class="docs-block">
-          <h2>パラメーター</h2>
+          <h2><budoux-ja>パラメーター</budoux-ja></h2>
           <table class="params-table">
             <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
             <tbody>
@@ -117,32 +120,32 @@
         </section>
 
         <section class="docs-block">
-          <h2>注意事項</h2>
+          <h2><budoux-ja>注意事項</budoux-ja></h2>
           <div class="note" role="note">
-            <p>⚠️ ブローカーによってサーバー時刻のGMTオフセットが異なります。表示が数時間ずれている場合は、<code>ServerGMTOffset</code> を手動で調整してください(多くの海外ブローカーは GMT+2 または GMT+3)。</p>
+            <p>⚠️ <budoux-ja>ブローカーによってサーバー時刻のGMTオフセットが異なります。表示が数時間ずれている場合は、</budoux-ja><code>ServerGMTOffset</code> <budoux-ja>を手動で調整してください(多くの海外ブローカーは GMT+2 または GMT+3)。</budoux-ja></p>
           </div>
         </section>
 
         <section class="docs-block">
-          <h2>このツールのFAQ</h2>
+          <h2><budoux-ja>このツールのFAQ</budoux-ja></h2>
           <div class="faq">
             <details class="faq__item" data-faq-single="false">
-              <summary class="faq__q">夏時間と冬時間の切替が正しく動きません</summary>
-              <div class="faq__a"><p><code>AutoDST=false</code> にして、<code>ServerGMTOffset</code> を手動設定することもできます。また、お使いのPCのタイムゾーン設定もご確認ください。</p></div>
+              <summary class="faq__q"><budoux-ja>夏時間と冬時間の切替が正しく動きません</budoux-ja></summary>
+              <div class="faq__a"><p><code>AutoDST=false</code> <budoux-ja>にして、</budoux-ja><code>ServerGMTOffset</code> <budoux-ja>を手動設定することもできます。また、お使いのPCのタイムゾーン設定もご確認ください。</budoux-ja></p></div>
             </details>
             <details class="faq__item" data-faq-single="false">
-              <summary class="faq__q">カウントダウンの秒がカクつきます</summary>
-              <div class="faq__a"><p>ティックが入らない休場時間帯は1秒毎の更新になりません。仕様上の動作です。</p></div>
+              <summary class="faq__q"><budoux-ja>カウントダウンの秒がカクつきます</budoux-ja></summary>
+              <div class="faq__a"><p><budoux-ja>ティックが入らない休場時間帯は1秒毎の更新になりません。仕様上の動作です。</budoux-ja></p></div>
             </details>
             <details class="faq__item" data-faq-single="false">
-              <summary class="faq__q">文字色を変えるとチャート背景と被って見えません</summary>
-              <div class="faq__a"><p><code>TextColor</code>をチャート背景色と対照的な色に変更してください。黒背景なら <code>clrWhite</code>、白背景なら <code>clrBlack</code> を推奨。</p></div>
+              <summary class="faq__q"><budoux-ja>文字色を変えるとチャート背景と被って見えません</budoux-ja></summary>
+              <div class="faq__a"><p><code>TextColor</code><budoux-ja>をチャート背景色と対照的な色に変更してください。黒背景なら</budoux-ja> <code>clrWhite</code><budoux-ja>、白背景なら</budoux-ja> <code>clrBlack</code> <budoux-ja>を推奨。</budoux-ja></p></div>
             </details>
           </div>
         </section>
 
         <section class="docs-block">
-          <h2>関連ツール</h2>
+          <h2><budoux-ja>関連ツール</budoux-ja></h2>
           <div class="related-tools">
             <a class="related-tools__item" data-tool="03" href="./tool-03-economic.html"><span class="related-tools__dot"></span>経済指標カウントダウン</a>
             <a class="related-tools__item" data-tool="09" href="./tool-09-multitf.html"><span class="related-tools__dot"></span>複数時間足トレンド一覧</a>

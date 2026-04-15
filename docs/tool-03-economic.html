@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- BudouX: 日本語の自然な改行位置を自動挿入 (<budoux-ja>で囲った要素に適用) -->
+  <script async src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
 </head>
 <body data-tool="03">
   <a href="#main" class="skip-link">本文へスキップ</a>
@@ -53,13 +56,13 @@
         <header class="docs-hero">
           <div class="docs-hero__icon" aria-hidden="true">📅</div>
           <span class="docs-hero__eyebrow">#03 · INDICATOR</span>
-          <h1 class="docs-hero__title">経済指標カウントダウン</h1>
-          <p class="docs-hero__sub"><code>EconomicCalendar_Countdown</code> — 重要経済指標までの残り時間を常時可視化</p>
+          <h1 class="docs-hero__title"><budoux-ja>経済指標カウントダウン</budoux-ja></h1>
+          <p class="docs-hero__sub"><code>EconomicCalendar_Countdown</code> — <budoux-ja>重要経済指標までの残り時間を常時可視化</budoux-ja></p>
         </header>
 
         <section class="docs-block">
-          <h2>概要</h2>
-          <p>経済指標発表の直前直後は値動きが激しく、知らずにエントリーして飛ばされる事故が後を絶ちません。本インジケーターは次回の主要経済指標までのカウントダウンをチャート右上に常時表示し、指定時間前にアラートを鳴らします。重要度別に色分けされるので一目で判断できます。</p>
+          <h2><budoux-ja>概要</budoux-ja></h2>
+          <p><budoux-ja>経済指標発表の直前直後は値動きが激しく、知らずにエントリーして飛ばされる事故が後を絶ちません。本インジケーターは次回の主要経済指標までのカウントダウンをチャート右上に常時表示し、指定時間前にアラートを鳴らします。重要度別に色分けされるので一目で判断できます。</budoux-ja></p>
           <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
             <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/EconomicCalendar_Countdown.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
             <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
@@ -67,30 +70,30 @@
         </section>
 
         <section class="docs-block">
-          <h2>主な機能</h2>
+          <h2><budoux-ja>主な機能</budoux-ja></h2>
           <ul class="feature-list">
-            <li>次回の重要経済指標までのカウントダウン表示(HH:MM:SS)</li>
-            <li>重要度(★★★ / ★★ / ★)別の色分け表示</li>
-            <li>指定時間前にポップアップ・サウンド・プッシュ通知でアラート</li>
-            <li>表示対象通貨のフィルタリング(USD/EUR/JPY/GBP 等)</li>
-            <li>設定ファイル(CSV)で指標スケジュールをユーザー編集可能</li>
-            <li>表示コーナー・フォント・色をカスタマイズ可能</li>
+            <li><budoux-ja>次回の重要経済指標までのカウントダウン表示(HH:MM:SS)</budoux-ja></li>
+            <li><budoux-ja>重要度(★★★ / ★★ / ★)別の色分け表示</budoux-ja></li>
+            <li><budoux-ja>指定時間前にポップアップ・サウンド・プッシュ通知でアラート</budoux-ja></li>
+            <li><budoux-ja>表示対象通貨のフィルタリング(USD/EUR/JPY/GBP 等)</budoux-ja></li>
+            <li><budoux-ja>設定ファイル(CSV)で指標スケジュールをユーザー編集可能</budoux-ja></li>
+            <li><budoux-ja>表示コーナー・フォント・色をカスタマイズ可能</budoux-ja></li>
           </ul>
         </section>
 
         <section class="docs-block">
-          <h2>使い方</h2>
+          <h2><budoux-ja>使い方</budoux-ja></h2>
           <ol class="step-list">
-            <li>zipを解凍し<code>EconomicCalendar_Countdown.ex4</code>と同梱CSVを取り出す</li>
-            <li>MT4「データフォルダを開く」→ MQL4 → Indicators に配置、CSVは MQL4 → Files に配置</li>
-            <li>MT4を再起動してチャートへドラッグ</li>
-            <li>対象通貨・重要度のフィルタを設定</li>
-            <li>必要に応じてCSVを編集して最新の指標予定を反映</li>
+            <li><budoux-ja>zipを解凍し</budoux-ja><code>EconomicCalendar_Countdown.ex4</code><budoux-ja>と同梱CSVを取り出す</budoux-ja></li>
+            <li><budoux-ja>MT4「データフォルダを開く」→ MQL4 → Indicators に配置、CSVは MQL4 → Files に配置</budoux-ja></li>
+            <li><budoux-ja>MT4を再起動してチャートへドラッグ</budoux-ja></li>
+            <li><budoux-ja>対象通貨・重要度のフィルタを設定</budoux-ja></li>
+            <li><budoux-ja>必要に応じてCSVを編集して最新の指標予定を反映</budoux-ja></li>
           </ol>
         </section>
 
         <section class="docs-block">
-          <h2>パラメーター</h2>
+          <h2><budoux-ja>パラメーター</budoux-ja></h2>
           <table class="params-table">
             <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
             <tbody>
@@ -109,21 +112,21 @@
         </section>
 
         <section class="docs-block">
-          <h2>注意事項</h2>
-          <div class="note" role="note"><p>⚠️ 指標スケジュールCSVはユーザー自身で定期的に更新が必要です。予定変更や臨時発表には対応できません。重要な取引判断の前には必ず公式カレンダーでご確認ください。</p></div>
+          <h2><budoux-ja>注意事項</budoux-ja></h2>
+          <div class="note" role="note"><p>⚠️ <budoux-ja>指標スケジュールCSVはユーザー自身で定期的に更新が必要です。予定変更や臨時発表には対応できません。重要な取引判断の前には必ず公式カレンダーでご確認ください。</budoux-ja></p></div>
         </section>
 
         <section class="docs-block">
-          <h2>このツールのFAQ</h2>
+          <h2><budoux-ja>このツールのFAQ</budoux-ja></h2>
           <div class="faq">
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">CSVファイルのフォーマットは?</summary><div class="faq__a"><p>同梱の<code>calendar_sample.csv</code>をご参照ください。日時(UTC)、通貨、指標名、重要度(1-3)の4列です。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">カウントダウンが表示されません</summary><div class="faq__a"><p>CSVが<code>Files</code>フォルダにあるか、<code>ECC_FilterCurrencies</code>が適切か、今後のイベントがCSVに含まれているかご確認ください。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">指標データを自動取得できますか?</summary><div class="faq__a"><p>Web通信には対応していません。手動でCSVを更新する運用を想定しています。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>CSVファイルのフォーマットは?</budoux-ja></summary><div class="faq__a"><p><budoux-ja>同梱の</budoux-ja><code>calendar_sample.csv</code><budoux-ja>をご参照ください。日時(UTC)、通貨、指標名、重要度(1-3)の4列です。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>カウントダウンが表示されません</budoux-ja></summary><div class="faq__a"><p><budoux-ja>CSVが</budoux-ja><code>Files</code><budoux-ja>フォルダにあるか、</budoux-ja><code>ECC_FilterCurrencies</code><budoux-ja>が適切か、今後のイベントがCSVに含まれているかご確認ください。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>指標データを自動取得できますか?</budoux-ja></summary><div class="faq__a"><p><budoux-ja>Web通信には対応していません。手動でCSVを更新する運用を想定しています。</budoux-ja></p></div></details>
           </div>
         </section>
 
         <section class="docs-block">
-          <h2>関連ツール</h2>
+          <h2><budoux-ja>関連ツール</budoux-ja></h2>
           <div class="related-tools">
             <a class="related-tools__item" data-tool="01" href="./tool-01-jptime.html"><span class="related-tools__dot"></span>日本時間表示インジケーター</a>
             <a class="related-tools__item" data-tool="08" href="./tool-08-warning.html"><span class="related-tools__dot"></span>自動ポジションサイズ警告</a>

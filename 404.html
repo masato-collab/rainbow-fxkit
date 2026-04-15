@@ -13,6 +13,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/rainbow-fxkit/css/style.css">
+
+  <!-- BudouX: 日本語の自然な改行位置を自動挿入 (<budoux-ja>で囲った要素に適用) -->
+  <script async src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
 </head>
 <body>
 
@@ -30,11 +33,11 @@
       <div>
         <p class="err__code">404</p>
         <h1 style="font-size:clamp(1.5rem, 4vw, 2rem);margin-bottom:var(--space-3);">
-          このページは虹の向こうに隠れてしまったようです 🌈
+          <budoux-ja>このページは虹の向こうに隠れてしまったようです</budoux-ja> 🌈
         </h1>
         <p class="err__msg">
-          お探しのページは、削除されたか、URL が変更された可能性があります。<br>
-          トップページからお目当てのツールを探してみてください。
+          <budoux-ja>お探しのページは、削除されたか、URL が変更された可能性があります。</budoux-ja><br>
+          <budoux-ja>トップページからお目当てのツールを探してみてください。</budoux-ja>
         </p>
         <p style="display:flex;gap:var(--space-3);justify-content:center;flex-wrap:wrap;">
           <a href="/rainbow-fxkit/" class="btn btn--primary btn--lg">🏠 トップページへ戻る</a>

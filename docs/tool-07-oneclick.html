@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- BudouX: 日本語の自然な改行位置を自動挿入 (<budoux-ja>で囲った要素に適用) -->
+  <script async src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
 </head>
 <body data-tool="07">
   <a href="#main" class="skip-link">本文へスキップ</a>
@@ -53,13 +56,13 @@
         <header class="docs-hero">
           <div class="docs-hero__icon" aria-hidden="true">⚡</div>
           <span class="docs-hero__eyebrow">#07 · UTILITY EA</span>
-          <h1 class="docs-hero__title">ワンクリック全決済</h1>
-          <p class="docs-hero__sub"><code>OneClick_CloseAll</code> — 複数の決済オプションをボタン一発で実行、緊急時の冷静な操作を支援</p>
+          <h1 class="docs-hero__title"><budoux-ja>ワンクリック全決済</budoux-ja></h1>
+          <p class="docs-hero__sub"><code>OneClick_CloseAll</code> — <budoux-ja>複数の決済オプションをボタン一発で実行、緊急時の冷静な操作を支援</budoux-ja></p>
         </header>
 
         <section class="docs-block">
-          <h2>概要</h2>
-          <p>複数ポジション保有中にパニックになり、個別決済を繰り返している間に相場がさらに動いて損失を拡大させる——これは多くの初心者が経験する悲劇です。本ツールはチャート上にボタンパネルを表示し、全決済・買いのみ・売りのみ・建値以上/以下決済などをワンクリックで実行できるようにします。</p>
+          <h2><budoux-ja>概要</budoux-ja></h2>
+          <p><budoux-ja>複数ポジション保有中にパニックになり、個別決済を繰り返している間に相場がさらに動いて損失を拡大させる——これは多くの初心者が経験する悲劇です。本ツールはチャート上にボタンパネルを表示し、全決済・買いのみ・売りのみ・建値以上/以下決済などをワンクリックで実行できるようにします。</budoux-ja></p>
           <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
             <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/OneClick_CloseAll.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
             <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
@@ -67,31 +70,31 @@
         </section>
 
         <section class="docs-block">
-          <h2>主な機能</h2>
+          <h2><budoux-ja>主な機能</budoux-ja></h2>
           <ul class="feature-list">
-            <li>全決済ボタン: 口座内の全ポジションを一括決済</li>
-            <li>買いのみ/売りのみ: 片方向だけを決済</li>
-            <li>建値以上決済: 含み益のポジションのみ決済(利益確保)</li>
-            <li>建値以下決済: 含み損のポジションのみ決済(損切り切替)</li>
-            <li>同一通貨ペアのみ/全ペア対象の切替</li>
-            <li>実行前に「本当に決済しますか?」確認ダイアログ</li>
-            <li>マジックナンバーフィルタで特定EA由来のポジションだけ決済可能</li>
+            <li><budoux-ja>全決済ボタン: 口座内の全ポジションを一括決済</budoux-ja></li>
+            <li><budoux-ja>買いのみ/売りのみ: 片方向だけを決済</budoux-ja></li>
+            <li><budoux-ja>建値以上決済: 含み益のポジションのみ決済(利益確保)</budoux-ja></li>
+            <li><budoux-ja>建値以下決済: 含み損のポジションのみ決済(損切り切替)</budoux-ja></li>
+            <li><budoux-ja>同一通貨ペアのみ/全ペア対象の切替</budoux-ja></li>
+            <li><budoux-ja>実行前に「本当に決済しますか?」確認ダイアログ</budoux-ja></li>
+            <li><budoux-ja>マジックナンバーフィルタで特定EA由来のポジションだけ決済可能</budoux-ja></li>
           </ul>
         </section>
 
         <section class="docs-block">
-          <h2>使い方</h2>
+          <h2><budoux-ja>使い方</budoux-ja></h2>
           <ol class="step-list">
-            <li>zipを解凍し<code>OneClick_CloseAll.ex4</code>を取り出す</li>
-            <li>MT4「データフォルダを開く」→ MQL4 → Experts に配置</li>
-            <li>自動売買を有効化してチャートにドラッグ</li>
-            <li>パネルのボタンで決済種別を選択</li>
-            <li>確認ダイアログで「はい」を押すと決済実行</li>
+            <li><budoux-ja>zipを解凍し</budoux-ja><code>OneClick_CloseAll.ex4</code><budoux-ja>を取り出す</budoux-ja></li>
+            <li><budoux-ja>MT4「データフォルダを開く」→ MQL4 → Experts に配置</budoux-ja></li>
+            <li><budoux-ja>自動売買を有効化してチャートにドラッグ</budoux-ja></li>
+            <li><budoux-ja>パネルのボタンで決済種別を選択</budoux-ja></li>
+            <li><budoux-ja>確認ダイアログで「はい」を押すと決済実行</budoux-ja></li>
           </ol>
         </section>
 
         <section class="docs-block">
-          <h2>パラメーター</h2>
+          <h2><budoux-ja>パラメーター</budoux-ja></h2>
           <table class="params-table">
             <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
             <tbody>
@@ -107,21 +110,21 @@
         </section>
 
         <section class="docs-block">
-          <h2>注意事項</h2>
-          <div class="note" role="note"><p>⚠️ 本ツールは実際の決済処理を行います。誤操作防止のため確認ダイアログをオンにしておくことを強く推奨します。大荒れ相場ではスプレッド拡大で想定外の価格で約定する可能性がある点にもご注意ください。</p></div>
+          <h2><budoux-ja>注意事項</budoux-ja></h2>
+          <div class="note" role="note"><p>⚠️ <budoux-ja>本ツールは実際の決済処理を行います。誤操作防止のため確認ダイアログをオンにしておくことを強く推奨します。大荒れ相場ではスプレッド拡大で想定外の価格で約定する可能性がある点にもご注意ください。</budoux-ja></p></div>
         </section>
 
         <section class="docs-block">
-          <h2>このツールのFAQ</h2>
+          <h2><budoux-ja>このツールのFAQ</budoux-ja></h2>
           <div class="faq">
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">「取引が許可されていません」エラーが出ます</summary><div class="faq__a"><p>MT4の「自動売買」ボタンを有効化し、ツールのプロパティ「全般」タブで「自動売買を許可」のチェックが入っているかご確認ください。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">一部のポジションが決済されません</summary><div class="faq__a"><p><code>OCA_CurrentSymbolOnly</code>がtrueだと他ペアは対象外です。全ペア決済したい場合はfalseに。また、再試行しても失敗した場合はエキスパートログをご確認ください。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">ボタンパネルをチャート外に追い出したい</summary><div class="faq__a"><p>パネルは現在のチャート内にのみ表示できます。フローティングは非対応です。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>「取引が許可されていません」エラーが出ます</budoux-ja></summary><div class="faq__a"><p><budoux-ja>MT4の「自動売買」ボタンを有効化し、ツールのプロパティ「全般」タブで「自動売買を許可」のチェックが入っているかご確認ください。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>一部のポジションが決済されません</budoux-ja></summary><div class="faq__a"><p><code>OCA_CurrentSymbolOnly</code><budoux-ja>がtrueだと他ペアは対象外です。全ペア決済したい場合はfalseに。また、再試行しても失敗した場合はエキスパートログをご確認ください。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>ボタンパネルをチャート外に追い出したい</budoux-ja></summary><div class="faq__a"><p><budoux-ja>パネルは現在のチャート内にのみ表示できます。フローティングは非対応です。</budoux-ja></p></div></details>
           </div>
         </section>
 
         <section class="docs-block">
-          <h2>関連ツール</h2>
+          <h2><budoux-ja>関連ツール</budoux-ja></h2>
           <div class="related-tools">
             <a class="related-tools__item" data-tool="06" href="./tool-06-sltp.html"><span class="related-tools__dot"></span>ビジュアル損切り・利確ライン</a>
             <a class="related-tools__item" data-tool="08" href="./tool-08-warning.html"><span class="related-tools__dot"></span>自動ポジションサイズ警告</a>

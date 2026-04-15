@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- BudouX: 日本語の自然な改行位置を自動挿入 (<budoux-ja>で囲った要素に適用) -->
+  <script async src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
 </head>
 <body data-tool="02">
   <a href="#main" class="skip-link">本文へスキップ</a>
@@ -58,13 +61,13 @@
         <header class="docs-hero">
           <div class="docs-hero__icon" aria-hidden="true">🔔</div>
           <span class="docs-hero__eyebrow">#02 · INDICATOR</span>
-          <h1 class="docs-hero__title">キリ番アラート</h1>
-          <p class="docs-hero__sub"><code>RoundNumber_Alert</code> — キリの良い価格帯への接近・到達を音と通知で逃さない</p>
+          <h1 class="docs-hero__title"><budoux-ja>キリ番アラート</budoux-ja></h1>
+          <p class="docs-hero__sub"><code>RoundNumber_Alert</code> — <budoux-ja>キリの良い価格帯への接近・到達を音と通知で逃さない</budoux-ja></p>
         </header>
 
         <section class="docs-block">
-          <h2>概要</h2>
-          <p>FXでは X.X000 や X.X500 といった「キリ番」が強力なサポート/レジスタンスとして機能することが多く、見落とすと痛恨の損失につながります。本インジケーターはキリ番にラインを自動描画し、接近時と到達時に音・ポップアップ・メール/プッシュで通知します。</p>
+          <h2><budoux-ja>概要</budoux-ja></h2>
+          <p><budoux-ja>FXでは X.X000 や X.X500 といった「キリ番」が強力なサポート/レジスタンスとして機能することが多く、見落とすと痛恨の損失につながります。本インジケーターはキリ番にラインを自動描画し、接近時と到達時に音・ポップアップ・メール/プッシュで通知します。</budoux-ja></p>
           <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
             <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/RoundNumber_Alert.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
             <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
@@ -72,31 +75,31 @@
         </section>
 
         <section class="docs-block">
-          <h2>主な機能</h2>
+          <h2><budoux-ja>主な機能</budoux-ja></h2>
           <ul class="feature-list">
-            <li>指定pips間隔のキリ番を自動計算(10/25/50/100pipsなど)</li>
-            <li>チャート上下に指定本数分のキリ番水平ラインを自動描画</li>
-            <li>残り○pipsでの接近アラート(距離はパラメーターで指定)</li>
-            <li>タッチ/ブレイク時の到達アラート</li>
-            <li>同一キリ番への重複アラートを自動抑制(価格が離れるまで再発動しない)</li>
-            <li>JPYペア/その他ペアのpip単位を自動判定(3桁/5桁ブローカー対応)</li>
-            <li>音・ポップアップ・メール・プッシュ通知すべて対応</li>
+            <li><budoux-ja>指定pips間隔のキリ番を自動計算(10/25/50/100pipsなど)</budoux-ja></li>
+            <li><budoux-ja>チャート上下に指定本数分のキリ番水平ラインを自動描画</budoux-ja></li>
+            <li><budoux-ja>残り○pipsでの接近アラート(距離はパラメーターで指定)</budoux-ja></li>
+            <li><budoux-ja>タッチ/ブレイク時の到達アラート</budoux-ja></li>
+            <li><budoux-ja>同一キリ番への重複アラートを自動抑制(価格が離れるまで再発動しない)</budoux-ja></li>
+            <li><budoux-ja>JPYペア/その他ペアのpip単位を自動判定(3桁/5桁ブローカー対応)</budoux-ja></li>
+            <li><budoux-ja>音・ポップアップ・メール・プッシュ通知すべて対応</budoux-ja></li>
           </ul>
         </section>
 
         <section class="docs-block">
-          <h2>使い方</h2>
+          <h2><budoux-ja>使い方</budoux-ja></h2>
           <ol class="step-list">
-            <li>zipを解凍し <code>RoundNumber_Alert.ex4</code> を取り出す</li>
-            <li>MT4「データフォルダを開く」→ MQL4 → Indicators に配置</li>
-            <li>MT4を再起動、ナビゲーターからチャートにドラッグ</li>
-            <li>キリ番間隔(<code>RNA_IntervalPips</code>)と接近距離(<code>RNA_ApproachPips</code>)を設定</li>
-            <li>通知したい方法のフラグ(Alert/Sound/Mail/Push)をオン</li>
+            <li><budoux-ja>zipを解凍し</budoux-ja> <code>RoundNumber_Alert.ex4</code> <budoux-ja>を取り出す</budoux-ja></li>
+            <li><budoux-ja>MT4「データフォルダを開く」→ MQL4 → Indicators に配置</budoux-ja></li>
+            <li><budoux-ja>MT4を再起動、ナビゲーターからチャートにドラッグ</budoux-ja></li>
+            <li><budoux-ja>キリ番間隔(</budoux-ja><code>RNA_IntervalPips</code><budoux-ja>)と接近距離(</budoux-ja><code>RNA_ApproachPips</code><budoux-ja>)を設定</budoux-ja></li>
+            <li><budoux-ja>通知したい方法のフラグ(Alert/Sound/Mail/Push)をオン</budoux-ja></li>
           </ol>
         </section>
 
         <section class="docs-block">
-          <h2>パラメーター</h2>
+          <h2><budoux-ja>パラメーター</budoux-ja></h2>
           <table class="params-table">
             <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
             <tbody>
@@ -116,32 +119,32 @@
         </section>
 
         <section class="docs-block">
-          <h2>注意事項</h2>
+          <h2><budoux-ja>注意事項</budoux-ja></h2>
           <div class="note" role="note">
-            <p>⚠️ メール通知は MT4「ツール→オプション→メール」でSMTP設定、プッシュ通知は「通知機能」でMetaQuotes IDの登録が必要です。</p>
+            <p>⚠️ <budoux-ja>メール通知は MT4「ツール→オプション→メール」でSMTP設定、プッシュ通知は「通知機能」でMetaQuotes IDの登録が必要です。</budoux-ja></p>
           </div>
         </section>
 
         <section class="docs-block">
-          <h2>このツールのFAQ</h2>
+          <h2><budoux-ja>このツールのFAQ</budoux-ja></h2>
           <div class="faq">
             <details class="faq__item" data-faq-single="false">
-              <summary class="faq__q">同じキリ番で何度も鳴ってしまいます</summary>
-              <div class="faq__a"><p><code>RNA_ResetBufferPips</code>を大きめ(3.0〜5.0)に設定してください。</p></div>
+              <summary class="faq__q"><budoux-ja>同じキリ番で何度も鳴ってしまいます</budoux-ja></summary>
+              <div class="faq__a"><p><code>RNA_ResetBufferPips</code><budoux-ja>を大きめ(3.0〜5.0)に設定してください。</budoux-ja></p></div>
             </details>
             <details class="faq__item" data-faq-single="false">
-              <summary class="faq__q">ラインが描画されません</summary>
-              <div class="faq__a"><p><code>RNA_IntervalPips</code>が大きすぎる可能性があります。小さい値でお試しください。</p></div>
+              <summary class="faq__q"><budoux-ja>ラインが描画されません</budoux-ja></summary>
+              <div class="faq__a"><p><code>RNA_IntervalPips</code><budoux-ja>が大きすぎる可能性があります。小さい値でお試しください。</budoux-ja></p></div>
             </details>
             <details class="faq__item" data-faq-single="false">
-              <summary class="faq__q">サウンドが鳴りません</summary>
-              <div class="faq__a"><p><code>RNA_SoundApproach</code>/<code>RNA_SoundTouch</code>に指定したWAVファイルがMT4の<code>Sounds</code>フォルダにあるかご確認ください。</p></div>
+              <summary class="faq__q"><budoux-ja>サウンドが鳴りません</budoux-ja></summary>
+              <div class="faq__a"><p><code>RNA_SoundApproach</code>/<code>RNA_SoundTouch</code><budoux-ja>に指定したWAVファイルがMT4の</budoux-ja><code>Sounds</code><budoux-ja>フォルダにあるかご確認ください。</budoux-ja></p></div>
             </details>
           </div>
         </section>
 
         <section class="docs-block">
-          <h2>関連ツール</h2>
+          <h2><budoux-ja>関連ツール</budoux-ja></h2>
           <div class="related-tools">
             <a class="related-tools__item" data-tool="06" href="./tool-06-sltp.html"><span class="related-tools__dot"></span>ビジュアル損切り・利確ライン</a>
             <a class="related-tools__item" data-tool="09" href="./tool-09-multitf.html"><span class="related-tools__dot"></span>複数時間足トレンド一覧</a>

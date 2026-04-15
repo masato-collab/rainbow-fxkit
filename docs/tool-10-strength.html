@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- BudouX: 日本語の自然な改行位置を自動挿入 (<budoux-ja>で囲った要素に適用) -->
+  <script async src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
 </head>
 <body data-tool="10">
   <a href="#main" class="skip-link">本文へスキップ</a>
@@ -53,13 +56,13 @@
         <header class="docs-hero">
           <div class="docs-hero__icon" aria-hidden="true">💪</div>
           <span class="docs-hero__eyebrow">#10 · INDICATOR</span>
-          <h1 class="docs-hero__title">通貨強弱メーター</h1>
-          <p class="docs-hero__sub"><code>CurrencyStrength_Meter</code> — 主要8通貨の強弱をランキング表示、最強×最弱ペアを自動提示</p>
+          <h1 class="docs-hero__title"><budoux-ja>通貨強弱メーター</budoux-ja></h1>
+          <p class="docs-hero__sub"><code>CurrencyStrength_Meter</code> — <budoux-ja>主要8通貨の強弱をランキング表示、最強×最弱ペアを自動提示</budoux-ja></p>
         </header>
 
         <section class="docs-block">
-          <h2>概要</h2>
-          <p>「どの通貨ペアをトレードすべきか」の判断に役立つのが通貨強弱です。本インジケーターはUSD/EUR/JPY/GBP/AUD/NZD/CAD/CHFの主要8通貨の強弱を計算し、バーグラフでランキング表示。同時に「最強通貨×最弱通貨」の組み合わせを推奨ペアとして提示します。</p>
+          <h2><budoux-ja>概要</budoux-ja></h2>
+          <p><budoux-ja>「どの通貨ペアをトレードすべきか」の判断に役立つのが通貨強弱です。本インジケーターはUSD/EUR/JPY/GBP/AUD/NZD/CAD/CHFの主要8通貨の強弱を計算し、バーグラフでランキング表示。同時に「最強通貨×最弱通貨」の組み合わせを推奨ペアとして提示します。</budoux-ja></p>
           <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
             <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/CurrencyStrength_Meter.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
             <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
@@ -67,30 +70,30 @@
         </section>
 
         <section class="docs-block">
-          <h2>主な機能</h2>
+          <h2><budoux-ja>主な機能</budoux-ja></h2>
           <ul class="feature-list">
-            <li>主要8通貨の強弱をバーグラフで可視化</li>
-            <li>強さランキング(1位〜8位)を数値付きで表示</li>
-            <li>最強通貨×最弱通貨のペアを自動算出して推奨表示</li>
-            <li>計算期間と対象時間足をパラメーターで指定可能</li>
-            <li>強弱の順位変動(クロスオーバー)時にアラート</li>
-            <li>バーの色をRainbow Projectのツールカラーに統一可能</li>
+            <li><budoux-ja>主要8通貨の強弱をバーグラフで可視化</budoux-ja></li>
+            <li><budoux-ja>強さランキング(1位〜8位)を数値付きで表示</budoux-ja></li>
+            <li><budoux-ja>最強通貨×最弱通貨のペアを自動算出して推奨表示</budoux-ja></li>
+            <li><budoux-ja>計算期間と対象時間足をパラメーターで指定可能</budoux-ja></li>
+            <li><budoux-ja>強弱の順位変動(クロスオーバー)時にアラート</budoux-ja></li>
+            <li><budoux-ja>バーの色をRainbow Projectのツールカラーに統一可能</budoux-ja></li>
           </ul>
         </section>
 
         <section class="docs-block">
-          <h2>使い方</h2>
+          <h2><budoux-ja>使い方</budoux-ja></h2>
           <ol class="step-list">
-            <li>zipを解凍し<code>CurrencyStrength_Meter.ex4</code>を取り出す</li>
-            <li>MT4「データフォルダを開く」→ MQL4 → Indicators に配置</li>
-            <li>MT4を再起動しチャートにドラッグ</li>
-            <li>計算する時間足(デフォルトH1)と期間を設定</li>
-            <li>推奨ペアをチャートで確認し、他のツールと併用してエントリー検討</li>
+            <li><budoux-ja>zipを解凍し</budoux-ja><code>CurrencyStrength_Meter.ex4</code><budoux-ja>を取り出す</budoux-ja></li>
+            <li><budoux-ja>MT4「データフォルダを開く」→ MQL4 → Indicators に配置</budoux-ja></li>
+            <li><budoux-ja>MT4を再起動しチャートにドラッグ</budoux-ja></li>
+            <li><budoux-ja>計算する時間足(デフォルトH1)と期間を設定</budoux-ja></li>
+            <li><budoux-ja>推奨ペアをチャートで確認し、他のツールと併用してエントリー検討</budoux-ja></li>
           </ol>
         </section>
 
         <section class="docs-block">
-          <h2>パラメーター</h2>
+          <h2><budoux-ja>パラメーター</budoux-ja></h2>
           <table class="params-table">
             <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
             <tbody>
@@ -106,21 +109,21 @@
         </section>
 
         <section class="docs-block">
-          <h2>注意事項</h2>
-          <div class="note" role="note"><p>⚠️ 強弱計算は「全通貨の関連ペア(ドルストレート・クロス)」のデータを使うため、気配値表示で主要ペアを全て有効化しておく必要があります。データが不足するとバーが空白になります。</p></div>
+          <h2><budoux-ja>注意事項</budoux-ja></h2>
+          <div class="note" role="note"><p>⚠️ <budoux-ja>強弱計算は「全通貨の関連ペア(ドルストレート・クロス)」のデータを使うため、気配値表示で主要ペアを全て有効化しておく必要があります。データが不足するとバーが空白になります。</budoux-ja></p></div>
         </section>
 
         <section class="docs-block">
-          <h2>このツールのFAQ</h2>
+          <h2><budoux-ja>このツールのFAQ</budoux-ja></h2>
           <div class="faq">
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">バーが全く表示されません</summary><div class="faq__a"><p>MT4「気配値表示」ウィンドウで、USD/EUR/JPY/GBP/AUD/NZD/CAD/CHFの全組み合わせ(28ペア)を「全て表示」にしてください。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">ブローカーの通貨ペア表記が違います</summary><div class="faq__a"><p>EURUSD.fx など接尾辞が付くブローカーもあります。パラメーター<code>CSM_SymbolSuffix</code>で指定可能です。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">どの時間足がおすすめ?</summary><div class="faq__a"><p>デイトレードならH1×24本(1日分)、スイングならH4×30本(約5日分)が目安です。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>バーが全く表示されません</budoux-ja></summary><div class="faq__a"><p><budoux-ja>MT4「気配値表示」ウィンドウで、USD/EUR/JPY/GBP/AUD/NZD/CAD/CHFの全組み合わせ(28ペア)を「全て表示」にしてください。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>ブローカーの通貨ペア表記が違います</budoux-ja></summary><div class="faq__a"><p><budoux-ja>EURUSD.fx など接尾辞が付くブローカーもあります。パラメーター</budoux-ja><code>CSM_SymbolSuffix</code><budoux-ja>で指定可能です。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>どの時間足がおすすめ?</budoux-ja></summary><div class="faq__a"><p><budoux-ja>デイトレードならH1×24本(1日分)、スイングならH4×30本(約5日分)が目安です。</budoux-ja></p></div></details>
           </div>
         </section>
 
         <section class="docs-block">
-          <h2>関連ツール</h2>
+          <h2><budoux-ja>関連ツール</budoux-ja></h2>
           <div class="related-tools">
             <a class="related-tools__item" data-tool="05" href="./tool-05-correlation.html"><span class="related-tools__dot"></span>相関通貨ペアモニター</a>
             <a class="related-tools__item" data-tool="09" href="./tool-09-multitf.html"><span class="related-tools__dot"></span>複数時間足トレンド一覧</a>

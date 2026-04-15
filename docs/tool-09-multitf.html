@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- BudouX: 日本語の自然な改行位置を自動挿入 (<budoux-ja>で囲った要素に適用) -->
+  <script async src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
 </head>
 <body data-tool="09">
   <a href="#main" class="skip-link">本文へスキップ</a>
@@ -53,13 +56,13 @@
         <header class="docs-hero">
           <div class="docs-hero__icon" aria-hidden="true">📈</div>
           <span class="docs-hero__eyebrow">#09 · INDICATOR</span>
-          <h1 class="docs-hero__title">複数時間足トレンド一覧</h1>
-          <p class="docs-hero__sub"><code>MultiTF_TrendPanel</code> — 全時間足のトレンドを信号機で一目把握</p>
+          <h1 class="docs-hero__title"><budoux-ja>複数時間足トレンド一覧</budoux-ja></h1>
+          <p class="docs-hero__sub"><code>MultiTF_TrendPanel</code> — <budoux-ja>全時間足のトレンドを信号機で一目把握</budoux-ja></p>
         </header>
 
         <section class="docs-block">
-          <h2>概要</h2>
-          <p>短期の動きだけを見て逆張りしてしまい、大きな流れに飲まれる——これもよくあるパターンです。本インジケーターはM5/M15/M30/H1/H4/D1/W1の複数時間足のトレンド方向を同時に計算し、上昇=緑/下降=赤/レンジ=灰色の信号機パネルで一覧表示します。全足一致時にアラートを鳴らす機能も。</p>
+          <h2><budoux-ja>概要</budoux-ja></h2>
+          <p><budoux-ja>短期の動きだけを見て逆張りしてしまい、大きな流れに飲まれる——これもよくあるパターンです。本インジケーターはM5/M15/M30/H1/H4/D1/W1の複数時間足のトレンド方向を同時に計算し、上昇=緑/下降=赤/レンジ=灰色の信号機パネルで一覧表示します。全足一致時にアラートを鳴らす機能も。</budoux-ja></p>
           <p style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
             <a href="https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/MultiTF_TrendPanel.zip" class="btn btn--tool" download>📥 ダウンロード (.zip)</a>
             <a href="../index.html#tools" class="btn btn--tool-outline">← ツール一覧へ戻る</a>
@@ -67,30 +70,30 @@
         </section>
 
         <section class="docs-block">
-          <h2>主な機能</h2>
+          <h2><budoux-ja>主な機能</budoux-ja></h2>
           <ul class="feature-list">
-            <li>M5〜W1の最大7時間足を一覧表示</li>
-            <li>上昇(緑)/下降(赤)/レンジ(灰)の信号機形式</li>
-            <li>トレンド判定方式を3種(MA/ADX/高安更新)から選択可能</li>
-            <li>全時間足の一致度(0〜100%)を算出</li>
-            <li>強いトレンド発生時(一致度が閾値超え)にアラート</li>
-            <li>監視する時間足を個別にオン/オフ可能</li>
+            <li><budoux-ja>M5〜W1の最大7時間足を一覧表示</budoux-ja></li>
+            <li><budoux-ja>上昇(緑)/下降(赤)/レンジ(灰)の信号機形式</budoux-ja></li>
+            <li><budoux-ja>トレンド判定方式を3種(MA/ADX/高安更新)から選択可能</budoux-ja></li>
+            <li><budoux-ja>全時間足の一致度(0〜100%)を算出</budoux-ja></li>
+            <li><budoux-ja>強いトレンド発生時(一致度が閾値超え)にアラート</budoux-ja></li>
+            <li><budoux-ja>監視する時間足を個別にオン/オフ可能</budoux-ja></li>
           </ul>
         </section>
 
         <section class="docs-block">
-          <h2>使い方</h2>
+          <h2><budoux-ja>使い方</budoux-ja></h2>
           <ol class="step-list">
-            <li>zipを解凍し<code>MultiTF_TrendPanel.ex4</code>を取り出す</li>
-            <li>MT4「データフォルダを開く」→ MQL4 → Indicators に配置</li>
-            <li>MT4を再起動しチャートにドラッグ</li>
-            <li>トレンド判定方式と有効化する時間足を選択</li>
-            <li>一致度アラートの閾値(例:80%)を設定</li>
+            <li><budoux-ja>zipを解凍し</budoux-ja><code>MultiTF_TrendPanel.ex4</code><budoux-ja>を取り出す</budoux-ja></li>
+            <li><budoux-ja>MT4「データフォルダを開く」→ MQL4 → Indicators に配置</budoux-ja></li>
+            <li><budoux-ja>MT4を再起動しチャートにドラッグ</budoux-ja></li>
+            <li><budoux-ja>トレンド判定方式と有効化する時間足を選択</budoux-ja></li>
+            <li><budoux-ja>一致度アラートの閾値(例:80%)を設定</budoux-ja></li>
           </ol>
         </section>
 
         <section class="docs-block">
-          <h2>パラメーター</h2>
+          <h2><budoux-ja>パラメーター</budoux-ja></h2>
           <table class="params-table">
             <thead><tr><th>パラメーター名</th><th>型</th><th>デフォルト</th><th>説明</th></tr></thead>
             <tbody>
@@ -106,21 +109,21 @@
         </section>
 
         <section class="docs-block">
-          <h2>注意事項</h2>
-          <div class="note" role="note"><p>⚠️ トレンド方向の判定は、使用する判定方式によって結果が異なります。同じチャートを異なる方式で見比べると、相場認識の幅が広がります。あくまで判断補助です。</p></div>
+          <h2><budoux-ja>注意事項</budoux-ja></h2>
+          <div class="note" role="note"><p>⚠️ <budoux-ja>トレンド方向の判定は、使用する判定方式によって結果が異なります。同じチャートを異なる方式で見比べると、相場認識の幅が広がります。あくまで判断補助です。</budoux-ja></p></div>
         </section>
 
         <section class="docs-block">
-          <h2>このツールのFAQ</h2>
+          <h2><budoux-ja>このツールのFAQ</budoux-ja></h2>
           <div class="faq">
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">一致度が常に低く、アラートが出ません</summary><div class="faq__a"><p>レンジ相場では一致度が低くなりがちです。<code>MTP_AlertMatchPct</code>を70%程度まで下げるか、<code>MTP_Method</code>を変えてみてください。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">上位足だけを重視したい</summary><div class="faq__a"><p>M5/M15/M30をオフにして、H1以上のみ監視する構成にできます。</p></div></details>
-            <details class="faq__item" data-faq-single="false"><summary class="faq__q">別の通貨ペアのトレンドも見られますか?</summary><div class="faq__a"><p>現状は表示中のチャートの通貨ペアのみです。別ペアは別チャートに当ててご利用ください。</p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>一致度が常に低く、アラートが出ません</budoux-ja></summary><div class="faq__a"><p><budoux-ja>レンジ相場では一致度が低くなりがちです。</budoux-ja><code>MTP_AlertMatchPct</code><budoux-ja>を70%程度まで下げるか、</budoux-ja><code>MTP_Method</code><budoux-ja>を変えてみてください。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>上位足だけを重視したい</budoux-ja></summary><div class="faq__a"><p><budoux-ja>M5/M15/M30をオフにして、H1以上のみ監視する構成にできます。</budoux-ja></p></div></details>
+            <details class="faq__item" data-faq-single="false"><summary class="faq__q"><budoux-ja>別の通貨ペアのトレンドも見られますか?</budoux-ja></summary><div class="faq__a"><p><budoux-ja>現状は表示中のチャートの通貨ペアのみです。別ペアは別チャートに当ててご利用ください。</budoux-ja></p></div></details>
           </div>
         </section>
 
         <section class="docs-block">
-          <h2>関連ツール</h2>
+          <h2><budoux-ja>関連ツール</budoux-ja></h2>
           <div class="related-tools">
             <a class="related-tools__item" data-tool="05" href="./tool-05-correlation.html"><span class="related-tools__dot"></span>相関通貨ペアモニター</a>
             <a class="related-tools__item" data-tool="10" href="./tool-10-strength.html"><span class="related-tools__dot"></span>通貨強弱メーター</a>
